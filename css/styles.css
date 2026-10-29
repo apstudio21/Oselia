@@ -235,10 +235,12 @@ section[id] { scroll-margin-top: 70px; }
 .season button svg { width: 17px; height: 17px; }
 .season button.is-on { background: #fff; color: var(--spruce); }
 .season button:not(.is-on):hover { background: rgba(255,255,255,.16); }
-.hero__text { width: fit-content; max-width: 100%; }
-.hero__top { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
+.hero__top { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 20px; animation: rise 1.1s var(--ease) both; }
 .hero__top .hero__place { margin: 0; }
+.hero__inner { row-gap: 18px; }
 .season--menu { background: rgba(255,255,255,.08); border-color: var(--line-light); }
+.mnav__season { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 4px 0; }
+.mnav__season > span { color: var(--mist); font-size: 15px; }
 .season--menu button.is-on { color: var(--spruce); }
 @media (max-width: 800px) { .season--hero { display: none; } }
 
@@ -255,7 +257,8 @@ section[id] { scroll-margin-top: 70px; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 .hero__text > * { animation: rise 1.1s var(--ease) both; }
 .hdr__msg { display: flex; gap: 6px; margin: 0 -6px 0 12px; }
-.hero__text > :nth-child(2) { animation-delay: .12s; }
+.hero__text > :nth-child(1) { animation-delay: .1s; }
+.hero__text > :nth-child(2) { animation-delay: .2s; }
 .hero__text > :nth-child(3) { animation-delay: .26s; }
 .hero__text > :nth-child(4) { animation-delay: .38s; }
 .gbadge { animation: rise 1.1s .5s var(--ease) both; }
@@ -275,6 +278,8 @@ section[id] { scroll-margin-top: 70px; }
 @media (max-width: 800px) {
   .hero__inner { grid-template-columns: minmax(0, 1fr); padding-top: 160px; }
   .gbadge { justify-self: start; grid-row: 1; }
+  .hero__top { grid-row: 2; }
+  .hero__text { grid-row: 3; }
   .hero__scroll { display: none; }
   .hero__actions .btn { flex: 1 1 auto; }
 }
@@ -499,27 +504,50 @@ section[id] { scroll-margin-top: 70px; }
 .retreat-teaser .lead { color: var(--moss); max-width: 50ch; }
 @media (max-width: 900px) { .retreat-teaser__grid { grid-template-columns: minmax(0, 1fr); } .retreat-teaser img { max-width: 520px; } }
 
-/* ---------- Локація ---------- */
+/* ---------- Карта курорту ---------- */
 .loc { padding: var(--sec) 0; }
-.loc__grid { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 3fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
-.map__scroll { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; border-radius: 6px; }
-.map__canvas { position: relative; min-width: 760px; }
-.map__canvas img { width: 100%; }
-.map__pin { position: absolute; left: var(--x); top: var(--y); transform: translate(-50%, -50%); text-decoration: none; display: grid; justify-items: center; }
+.map { margin: 0; }
+.map__open { position: relative; display: block; border-radius: 8px; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(20, 30, 25, .5); cursor: zoom-in; }
+.map__open img { width: 100%; transition: transform 1.2s var(--ease); }
+.map__open:hover img { transform: scale(1.015); }
+.map__pin { position: absolute; left: var(--x); top: var(--y); transform: translate(-50%, -50%); display: grid; justify-items: center; }
 .map__dot { width: 18px; height: 18px; border-radius: 50%; background: var(--kalyna); border: 3px solid #fff; animation: pulse 2.2s infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(158, 43, 37, .6); } 70% { box-shadow: 0 0 0 18px rgba(158, 43, 37, 0); } 100% { box-shadow: 0 0 0 0 rgba(158, 43, 37, 0); } }
 .map__label { position: absolute; bottom: calc(100% + 8px); padding: 7px 14px; border-radius: 999px; background: var(--kalyna); color: #fff; font: 400 1.05rem/1 var(--f-display); white-space: nowrap; box-shadow: 0 8px 20px -6px rgba(0,0,0,.35); }
 .map__label::after { content: ""; position: absolute; left: 50%; top: 100%; margin-left: -5px; border: 5px solid transparent; border-top-color: var(--kalyna); }
-.map__hint { display: none; margin: 12px 0 0; font-size: 14px; color: var(--moss); }
-.loc__info { display: grid; gap: 26px; }
-.loc__info .ic { width: 44px; height: 44px; margin-bottom: 10px; }
-.loc__info .ic svg { width: 21px; height: 21px; }
-.loc__info h3 { font: 400 1.4rem/1.15 var(--f-display); letter-spacing: -.02em; margin-bottom: 6px; }
-.loc__info p { margin: 0; color: var(--moss); font-size: 15.5px; }
-.loc__info .btn { justify-self: start; }
-@media (max-width: 1000px) { .loc__grid { grid-template-columns: minmax(0, 1fr); } .loc__info { grid-template-columns: repeat(3, minmax(0, 1fr)); } .loc__info .btn { grid-column: 1 / -1; } }
-@media (max-width: 800px) { .map__hint { display: block; } }
-@media (max-width: 600px) { .loc__info { grid-template-columns: minmax(0, 1fr); } }
+.map__zoom { position: absolute; right: 14px; top: 14px; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; background: rgba(248, 249, 245, .92); color: var(--spruce); font-size: 14px; font-weight: 500; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.map__zoom svg { width: 16px; height: 16px; }
+
+.resort { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(28px, 5vw, 72px); margin-top: clamp(32px, 4vw, 48px); align-items: start; }
+.pistes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 32px; }
+.pistes li { display: grid; grid-template-columns: 34px minmax(0, 1fr); column-gap: 14px; align-items: center; padding: 14px 0; border-top: 1px solid var(--line); }
+.pistes b { font-weight: 600; font-size: 15.5px; }
+.pistes small { grid-column: 2; color: var(--moss); font-size: 14px; }
+.piste { grid-row: span 2; width: 34px; height: 6px; border-radius: 3px; }
+.piste--blue { background: #2F8FD6; }
+.piste--red { background: #D3332B; }
+.piste--black { background: #15191B; }
+.piste--free { height: 0; border-top: 4px dashed #E6B81E; border-radius: 0; }
+.resort__facts { margin: 0; display: grid; gap: 0; }
+.resort__facts div { display: flex; align-items: baseline; gap: 16px; padding: 12px 0; border-top: 1px solid var(--line); }
+.resort__facts dt { font: 400 clamp(1.7rem, 2.6vw, 2.2rem)/1 var(--f-display); letter-spacing: -.03em; min-width: 3.6em; }
+.resort__facts dd { margin: 0; color: var(--moss); font-size: 15px; }
+
+.getting { margin-top: clamp(56px, 7vw, 96px); padding: clamp(28px, 4vw, 48px); background: var(--paper); border-radius: 8px; }
+.getting .h3 { margin-bottom: 26px; }
+.getting__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); margin-bottom: 30px; }
+.getting .ic { width: 44px; height: 44px; margin-bottom: 12px; }
+.getting .ic svg { width: 21px; height: 21px; }
+.getting h4 { margin: 0 0 6px; font: 400 1.35rem/1.15 var(--f-display); letter-spacing: -.02em; }
+.getting p { margin: 0; color: var(--moss); font-size: 15px; }
+@media (max-width: 1000px) { .resort { grid-template-columns: minmax(0, 1fr); } .getting__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .pistes, .getting__grid { grid-template-columns: minmax(0, 1fr); }
+  .map__zoom { font-size: 0; gap: 0; padding: 10px; right: 10px; top: 10px; }
+  .map__zoom svg { width: 18px; height: 18px; }
+  .map__dot { width: 12px; height: 12px; border-width: 2px; }
+  .map__label { font-size: .8rem; padding: 4px 9px; bottom: calc(100% + 5px); }
+}
 
 /* ---------- Галерея ---------- */
 .gallery { padding: var(--sec) 0; background: var(--spruce); color: var(--snow); }
@@ -775,3 +803,12 @@ body.is-locked { overflow: hidden; }
   .snow { display: none; }
 }
 @media (max-width: 520px) { .ftr__grid { grid-template-columns: minmax(0, 1fr); } .ftr a { overflow-wrap: anywhere; } }
+
+/* Ретрити: фото з вікна + ранкова йога */
+.rteaser__media { position: relative; margin: 0 0 40px; }
+.rteaser__inset { position: absolute; right: -6%; bottom: -40px; width: 52% !important; aspect-ratio: 16 / 10 !important; object-fit: cover; border: 8px solid var(--paper); border-radius: 6px; box-shadow: 0 20px 40px -22px rgba(20, 30, 25, .5); }
+.rrow__media--yoga { display: grid; grid-template-columns: 1.15fr 1fr; grid-template-rows: 1fr 1fr; gap: 14px; }
+.rrow__media--yoga img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
+.rrow__media--yoga img:first-child { grid-row: 1 / 3; aspect-ratio: 4 / 5; }
+@media (max-width: 900px) { .rteaser__inset { right: 12px; width: 56% !important; } }
+.nums__circle { overflow: hidden; }
