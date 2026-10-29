@@ -90,13 +90,15 @@
     </a>
 
     <div class="hdr__right">
-      <a class="hdr__soc" href="https://www.instagram.com/oselia_dragobrat/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
       <button class="phone" type="button" aria-expanded="false" aria-controls="phone-pop" data-phone-btn>
         <span class="phone__codes" aria-hidden="true"><span>093</span><span>096</span><span>099</span></span>
         <span class="phone__num" aria-hidden="true">09 01234</span>
         <span class="sr">Телефони: 093, 096 або 099 і далі 09 01234</span>
       </button>
-      <a class="hdr__soc" href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
+      <span class="hdr__msg">
+        <a class="hdr__soc" href="viber://chat?number=%2B380960901234" aria-label="Viber"><svg><use href="#i-viber"/></svg></a>
+        <a class="hdr__soc" href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
+      </span>
       <a class="btn btn--sm hdr__cta" href="#booking">Забронювати</a>
     </div>
 
@@ -122,6 +124,10 @@
 <div class="mnav" id="mnav" hidden data-mnav>
   <div class="mnav__top">
     <img src="assets/logo/emblem_240.webp" width="64" height="64" alt="Оселя">
+    <div class="season season--menu" role="group" aria-label="Сезон">
+      <button type="button" class="is-on" aria-pressed="true"><svg><use href="#i-snow"/></svg>Зима</button>
+      <button type="button" data-summer aria-pressed="false"><svg><use href="#i-sun"/></svg>Літо</button>
+    </div>
     <button class="hdr__icon" type="button" aria-label="Закрити меню" data-mnav-close><svg><use href="#i-close"/></svg></button>
   </div>
   <nav class="mnav__links" aria-label="Розділи">
@@ -161,14 +167,15 @@
       data-poster-mobile="assets/img/poster-hero-mobile.webp"></video>
   </div>
 
-  <div class="season season--hero" role="group" aria-label="Сезон">
-    <button type="button" class="is-on" aria-pressed="true"><svg><use href="#i-snow"/></svg>Зима</button>
-    <button type="button" data-summer aria-pressed="false"><svg><use href="#i-sun"/></svg>Літо</button>
-  </div>
-
   <div class="hero__inner wrap">
     <div class="hero__text">
-      <p class="hero__place"><svg><use href="#i-peak"/></svg>Драгобрат, 1350 м над рівнем моря</p>
+      <div class="hero__top">
+        <p class="hero__place"><svg><use href="#i-peak"/></svg>Драгобрат, 1350 м над рівнем моря</p>
+        <div class="season season--hero" role="group" aria-label="Сезон">
+          <button type="button" class="is-on" aria-pressed="true"><svg><use href="#i-snow"/></svg>Зима</button>
+          <button type="button" data-summer aria-pressed="false"><svg><use href="#i-sun"/></svg>Літо</button>
+        </div>
+      </div>
       <h1 class="hero__title">Твій дім <br>в обіймах Карпат</h1>
       <p class="hero__lead">Затишний готель із прямим виїздом з траси «Карпатської Чайки». Після схилів — сауна, гарячий чан у лісі та домашня кухня, а зранку — скі-тур з нашими гідами.</p>
       <div class="hero__actions">
