@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="uk">
+<html lang="uk" data-season="winter">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Оселя — готель на Драгобраті, 1350 м</title>
-<meta name="description" content="Затишний готель на Драгобраті з прямим виходом на трасу «Карпатської Чайки». Номери з видом на гори, сауна, чан, домашня кухня та найбільший в Україні прокат скітурного спорядження.">
+<meta name="description" content="Затишний готель на Драгобраті з прямим виїздом з траси «Карпатської Чайки». Номери з видом на гори, сауна, чан, домашня кухня та найбільший в Україні прокат скітурного спорядження.">
 <meta name="theme-color" content="#1F2E27">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Оселя — твій дім в обіймах Карпат">
@@ -15,42 +15,60 @@
 <link rel="preload" href="assets/fonts/kurale-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/onest-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/styles.css">
-<script>
-  // Сезон обирається до відмалювання сторінки, щоб не було «стрибка»
-  (function () {
-    var s = 'winter';
-    try {
-      var q = new URLSearchParams(location.search).get('season');
-      s = q === 'summer' || q === 'winter' ? q : (localStorage.getItem('oselia-season') || 'winter');
-    } catch (e) {}
-    document.documentElement.setAttribute('data-season', s);
-  })();
-</script>
 </head>
 <body>
-
 <svg class="sprite" aria-hidden="true">
+  <symbol id="i-telegram" viewBox="0 0 700 584"><path fill="currentColor" transform="translate(-50 -116.667)" d="M690.322,121.817C690.322,121.817 755.077,96.567 749.68,157.888C747.882,183.138 731.693,271.513 719.102,367.103L675.932,650.265C675.932,650.265 672.335,691.747 639.957,698.962C607.578,706.175 559.013,673.712 550.018,666.497C542.823,661.087 415.113,579.925 370.143,540.247C357.552,529.425 343.162,507.782 371.942,482.532L560.812,302.175C582.397,280.532 603.982,230.032 514.043,291.353L262.218,462.693C262.218,462.693 233.438,480.728 179.477,464.497L62.557,428.425C62.557,428.425 19.387,401.372 93.136,374.317C273.012,289.548 494.258,202.977 690.322,121.817Z"/></symbol>
+  <symbol id="i-viber" viewBox="-0.5 -0.45 23.6 24.9"><path fill="currentColor" d="M20.19,2.337C19.595,1.792 17.185,0.04 11.818,0.017C11.818,0.017 5.485,-0.362 2.4,2.469C0.684,4.185 0.083,6.698 0.014,9.815C-0.055,12.932 -0.132,18.774 5.499,20.362L5.504,20.362L5.499,22.781C5.499,22.781 5.462,23.761 6.106,23.958C6.884,24.202 7.344,23.456 8.089,22.654C8.497,22.213 9.059,21.567 9.486,21.074C10.086,21.133 10.782,21.166 11.487,21.166C13.314,21.166 15.089,20.941 16.785,20.517L16.635,20.549C17.413,20.296 21.815,19.733 22.527,13.892C23.271,7.862 22.173,4.058 20.19,2.337ZM20.842,13.452C20.235,18.327 16.669,18.637 16.013,18.847C14.581,19.211 12.937,19.419 11.244,19.419C10.758,19.419 10.276,19.402 9.799,19.368L9.863,19.372C9.863,19.372 7.425,22.311 6.666,23.075C6.418,23.323 6.145,23.303 6.15,22.808C6.15,22.485 6.169,18.79 6.169,18.79C1.402,17.468 1.678,12.492 1.734,9.893C1.79,7.294 2.278,5.158 3.731,3.724C6.343,1.357 11.72,1.708 11.72,1.708C16.263,1.727 18.438,3.096 18.944,3.555C20.618,4.99 21.471,8.422 20.842,13.451L20.842,13.452ZM14.331,9.664L14.331,9.678C14.331,9.846 14.195,9.982 14.027,9.982C13.864,9.982 13.731,9.854 13.724,9.693L13.724,9.692C13.728,9.65 13.731,9.6 13.731,9.551C13.731,8.75 13.082,8.101 12.281,8.101C12.251,8.101 12.221,8.102 12.192,8.104L12.196,8.104C12.035,8.095 11.908,7.963 11.908,7.801C11.908,7.633 12.044,7.497 12.212,7.497L12.229,7.497L12.228,7.497C12.248,7.496 12.273,7.496 12.297,7.496C13.423,7.496 14.335,8.408 14.335,9.534C14.335,9.58 14.333,9.626 14.33,9.671L14.33,9.665L14.331,9.664ZM15.282,10.195C15.329,8.207 14.087,6.651 11.729,6.477C11.57,6.466 11.446,6.334 11.446,6.174C11.446,6.006 11.582,5.87 11.75,5.87C11.757,5.87 11.765,5.87 11.772,5.871L11.771,5.871L11.788,5.871C14.055,5.871 15.894,7.709 15.894,9.977C15.894,10.058 15.892,10.139 15.887,10.219L15.888,10.208C15.884,10.373 15.75,10.504 15.585,10.504C15.417,10.504 15.281,10.368 15.281,10.2L15.281,10.192L15.282,10.195ZM17.482,10.824L17.482,10.826C17.482,10.994 17.346,11.13 17.178,11.13C17.01,11.13 16.876,10.995 16.875,10.829C16.851,7.007 14.302,4.926 11.213,4.904C11.045,4.904 10.91,4.768 10.91,4.601C10.91,4.434 11.046,4.298 11.213,4.298C14.672,4.322 17.452,6.709 17.48,10.823L17.482,10.824ZM16.957,15.422L16.957,15.431C16.451,16.322 15.504,17.306 14.529,16.992L14.52,16.978C12.688,16.294 11.104,15.4 9.689,14.299L9.73,14.329C8.987,13.737 8.334,13.084 7.761,12.366L7.742,12.341C7.233,11.703 6.756,10.989 6.34,10.235L6.3,10.156C5.843,9.41 5.43,8.548 5.107,7.643L5.077,7.545C4.763,6.57 5.742,5.623 6.638,5.117L6.647,5.117C6.777,5.034 6.935,4.984 7.105,4.984C7.372,4.984 7.61,5.107 7.767,5.298L7.768,5.3C7.768,5.3 8.349,5.993 8.598,6.336C8.832,6.655 9.147,7.166 9.31,7.451C9.404,7.598 9.459,7.778 9.459,7.971C9.459,8.259 9.335,8.518 9.137,8.697L9.136,8.698L8.574,9.148C8.419,9.298 8.323,9.508 8.323,9.74C8.323,9.763 8.324,9.785 8.326,9.807L8.326,9.804C8.905,11.707 10.374,13.176 12.236,13.745L12.278,13.756C12.297,13.758 12.32,13.759 12.342,13.759C12.574,13.759 12.784,13.663 12.934,13.509L13.384,12.947C13.564,12.748 13.823,12.624 14.111,12.624C14.304,12.624 14.483,12.68 14.635,12.776L14.631,12.774C15.444,13.237 16.147,13.746 16.788,14.323L16.777,14.313C16.969,14.467 17.09,14.702 17.09,14.965C17.09,15.134 17.04,15.291 16.953,15.423L16.955,15.42L16.957,15.422Z"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5 9 3l1.8 4.3-2.2 1.6a12 12 0 0 0 6.5 6.5l1.6-2.2L21 15l-.5 2.4a2.6 2.6 0 0 1-2.6 2.1A15.4 15.4 0 0 1 4.5 6.1 2.6 2.6 0 0 1 6.6 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
-  <symbol id="i-telegram" viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.3c-1 .4-1 1.5.1 1.8l4.6 1.4 1.8 5.5c.2.7 1.1.9 1.6.4l2.6-2.4 4.8 3.5c.7.5 1.6.1 1.8-.7l3-14.6c.2-1-.8-1.8-1.8-1.4ZM9.6 14.2l8.6-7.7-6.9 9-.3 3-1.4-4.3Z" fill="currentColor"/></symbol>
-  <symbol id="i-viber" viewBox="0 0 24 24"><path d="M12 2.5c-4.6 0-8.3 2.8-8.3 7.6 0 2.7 1 4.6 2.8 5.8v3.6c0 .5.6.8 1 .4l2.6-2.7c.6.1 1.2.1 1.9.1 4.6 0 8.3-2.8 8.3-7.2S16.6 2.5 12 2.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.2 7.3c.3-.2.7-.2.9.1l.8 1.2c.2.3.1.7-.1.9l-.4.3c.4 1 1.2 1.9 2.2 2.4l.4-.4c.2-.3.6-.3.9-.1l1.2.8c.3.2.4.6.1.9-.6.8-1.5 1-2.4.6a7.4 7.4 0 0 1-4-4.1c-.3-.9 0-1.8.4-2.6Z" fill="currentColor"/></symbol>
-  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
   <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M13.5 21v-7.4h2.6l.4-3h-3V8.7c0-.9.3-1.5 1.5-1.5h1.6V4.5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3Z" fill="currentColor"/></symbol>
   <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M21.2 7.6a2.5 2.5 0 0 0-1.8-1.8C17.9 5.4 12 5.4 12 5.4s-5.9 0-7.4.4a2.5 2.5 0 0 0-1.8 1.8C2.4 9.1 2.4 12 2.4 12s0 2.9.4 4.4c.2.9.9 1.6 1.8 1.8 1.5.4 7.4.4 7.4.4s5.9 0 7.4-.4c.9-.2 1.6-.9 1.8-1.8.4-1.5.4-4.4.4-4.4s0-2.9-.4-4.4ZM10.1 14.8V9.2l4.9 2.8-4.9 2.8Z" fill="currentColor"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4.5 7 7.5 6 7.5-6"/></g></symbol>
   <symbol id="i-snow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6"/><path d="m9.5 4.2 2.5 2 2.5-2M9.5 19.8l2.5-2 2.5 2M4.4 10.4l3.1-.6-1-3M19.6 13.6l-3.1.6 1 3M4.4 13.6l3.1.6-1 3M19.6 10.4l-3.1-.6 1-3"/></g></symbol>
   <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7"/></g></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z" fill="currentColor"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
   <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5L8 5.5Z" fill="currentColor"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 1 1 13 0C18.5 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
-  <symbol id="i-ski" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m3 20 9-15 9 15"/><path d="m8.5 11.2 2 1.4 1.5-1.6 1.5 1.6 2-1.4"/></g></symbol>
-  <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 16.5v-4l2-5.2c.2-.5.7-.8 1.2-.8h9.6c.5 0 1 .3 1.2.8l2 5.2v4H4Z"/><path d="M4 12.5h16"/><circle cx="7.6" cy="16.6" r="1.6"/><circle cx="16.4" cy="16.6" r="1.6"/></g></symbol>
-  <symbol id="i-parking" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 17V7.5h3a2.6 2.6 0 0 1 0 5.2h-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
-  <symbol id="i-medic" viewBox="0 0 24 24"><path d="M9.5 4h5v5.5H20v5h-5.5V20h-5v-5.5H4v-5h5.5V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
-  <symbol id="i-people" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="16.5" cy="9" r="2.4"/><path d="M15.5 14.1c2.6-.3 4.5 1.3 5 4.4"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 1 1 13 0C18.5 14.8 12 21 12 21Z"/><circle cx="12" cy="10" r="2.4"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
   <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M6 12h12M12 6v12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-peak" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m2.5 19.5 7-12 4 6.5 2.5-3.5 5.5 9z"/><path d="m7.6 10.8 1.9 1.4 1.7-1.6"/></g></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.2"/><path d="M18 9.8s-3.6-3.4-3.6-5.8a3.6 3.6 0 0 1 7.2 0c0 2.4-3.6 5.8-3.6 5.8Z"/><path d="M8.2 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h2.6" stroke-dasharray="2 2.2"/></g></symbol>
+  <symbol id="i-parking" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M10 17V7.5h3a2.6 2.6 0 0 1 0 5.2h-3"/></g></symbol>
+  <symbol id="i-medic" viewBox="0 0 24 24"><path d="M9.5 4h5v5.5H20v5h-5.5V20h-5v-5.5H4v-5h5.5V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="16.5" cy="9" r="2.4"/><path d="M15.5 14.1c2.6-.3 4.5 1.3 5 4.4"/></g></symbol>
+  <symbol id="i-area" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><rect x="8.5" y="8.5" width="7" height="7" rx="1"/></g></symbol>
+  <symbol id="i-guests" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c.8-3.8 3.6-6 7-6s6.2 2.2 7 6"/></g></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18.5V6M3 14h18v4.5M21 14v-2.5a2.5 2.5 0 0 0-2.5-2.5H11v5"/><circle cx="7" cy="11" r="1.8"/></g></symbol>
+  <symbol id="i-bath" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-2ZM6 12V6.5a2 2 0 0 1 3.7-1M7 19l-1 1.5M17 19l1 1.5"/></g></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8.5 20.5h7"/></g></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 9.5a13 13 0 0 1 18 0M6 12.8a8.6 8.6 0 0 1 12 0M9 16a4.2 4.2 0 0 1 6 0"/><circle cx="12" cy="19" r=".9" fill="currentColor"/></g></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21c-3.9 0-6.5-2.6-6.5-6.2 0-3.5 2.7-5.2 3.6-8.8 2 1.2 2.9 3 3 4.6 1-1 1.5-2.4 1.6-3.8 2.8 2 4.8 5 4.8 8 0 3.6-2.6 6.2-6.5 6.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s6 6.4 6 10.8a6 6 0 0 1-12 0C6 9.9 12 3.5 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-tub" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16l-1.3 7.2a2 2 0 0 1-2 1.8H7.3a2 2 0 0 1-2-1.8L4 11Z"/><path d="M8.5 8c0-1 1-1.4 1-2.5S8.5 4 8.5 3M12 8c0-1 1-1.4 1-2.5S12 4 12 3M15.5 8c0-1 1-1.4 1-2.5s-1-1.5-1-2.5"/></g></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h13v3.5a6.5 6.5 0 0 1-13 0V10Z"/><path d="M17 11.5h1.2a2.3 2.3 0 0 1 0 4.6H16.5M8.5 6.5c0-1 .8-1.3.8-2.2M12.5 6.5c0-1 .8-1.3.8-2.2"/></g></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8.5 5.5-13.5 15-14-.5 9.5-5.5 15-14 15"/><path d="M5 19c3-3.5 6-6.5 10-9"/></g></symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 9 0 0 1-18 0ZM9 20h6"/><path d="M9 8c0-1.2 1.2-1.6 1.2-3M13 8c0-1.2 1.2-1.6 1.2-3"/></g></symbol>
+  <symbol id="i-plate" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="5.5"/><path d="M3 4v5.5a1.5 1.5 0 0 0 3 0V4M4.5 11v9M21 4c-1.6.6-2.5 2.6-2.5 5.5 0 1 .6 1.5 1.5 1.5h1V20"/></g></symbol>
+  <symbol id="i-meat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 14.5c-3 3-8 2.7-9.6.3-1.6-2.4-.3-6.8 2.7-9.7 3-3 7.3-3.6 9.2-1.4 1.9 2.2.7 7.8-2.3 10.8Z"/><path d="m14.5 14.5 3.5 3.5M17.2 19.7a1.7 1.7 0 1 0 2.5-2.5 1.7 1.7 0 1 0-2.5 2.5Z"/></g></symbol>
+  <symbol id="i-fish" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c2.6-3.6 6-5.4 9.5-5.4 3.6 0 6.3 2.2 8 5.4-1.7 3.2-4.4 5.4-8 5.4S5.1 15.6 2.5 12Z"/><path d="M20 12l2-3v6l-2-3"/><circle cx="7.5" cy="11" r=".9" fill="currentColor"/></g></symbol>
+  <symbol id="i-grain" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V8"/><path d="M12 8c0-2.6 1.4-4.2 3-5 .3 2.6-.8 4.4-3 5ZM12 8c0-2.6-1.4-4.2-3-5-.3 2.6.8 4.4 3 5ZM12 13c1.8-2.4 3.8-3 5.6-2.5-.8 2.2-2.8 3.2-5.6 2.5ZM12 13c-1.8-2.4-3.8-3-5.6-2.5.8 2.2 2.8 3.2 5.6 2.5ZM12 18c1.8-2.4 3.8-3 5.6-2.5-.8 2.2-2.8 3.2-5.6 2.5ZM12 18c-1.8-2.4-3.8-3-5.6-2.5.8 2.2 2.8 3.2 5.6 2.5Z"/></g></symbol>
+  <symbol id="i-salad" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18a9 9 0 0 1-18 0Z"/><path d="M7 12c-.5-2.8 1-4.5 3.4-4.5M12 12c0-3 1.6-5.5 4.6-5.5M15.5 12c.4-1.5 1.6-2.4 3-2.4"/></g></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="9" width="16" height="9" rx="2"/><path d="M18.5 13.5h3"/><path d="M6 9l3-4 4 4M9.5 13a1 1 0 1 0 0 .1"/></g></symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5h16V13a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5Z"/><path d="M4 15.5c1.3 1 2.7 1 4 0s2.7-1 4 0 2.7 1 4 0 2.7-1 4 0M12 11V8M12 5.5c-.8-.8-.8-1.8 0-2.5.8.7.8 1.7 0 2.5Z"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+  <symbol id="i-ski" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 3.5 6 20.5M12.5 3.5 11 20.5"/><path d="M6.8 3.6c.4-.6 1-.6 1.2 0M11.8 3.6c.4-.6 1-.6 1.2 0M5.5 12h2.5M10.5 12H13"/><path d="M18.5 3v18M17 16.5h3"/></g></symbol>
+  <symbol id="i-boot" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7l.5 9 4.6 2.2c.9.4 1.4 1.3 1.4 2.3v1.5H4.5V14L7 3.5Z"/><path d="M4.5 20.5h16M8 8h6M7.4 11h6.8"/></g></symbol>
+  <symbol id="i-poles" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l2.5 18M16 3l-2.5 18M7 3h2M15 3h2"/><circle cx="10.2" cy="18.8" r="1.6"/><circle cx="13.8" cy="18.8" r="1.6"/></g></symbol>
+  <symbol id="i-sunrise" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 17a5 5 0 0 1 10 0M3 20.5h18M12 3.5V9M9.5 6.5 12 9l2.5-2.5M4.2 12.2l1.5 1M19.8 12.2l-1.5 1"/></g></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="3.5" width="13" height="13" rx="3"/><path d="M5.5 10h13M9 13.5h.1M15 13.5h.1M8 20.5l1.5-4M16 20.5l-1.5-4"/></g></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 16.5v-4l2-5.2c.2-.5.7-.8 1.2-.8h9.6c.5 0 1 .3 1.2.8l2 5.2v4H4Z"/><path d="M4 12.5h16"/><circle cx="7.6" cy="16.6" r="1.6"/><circle cx="16.4" cy="16.6" r="1.6"/></g></symbol>
+  <symbol id="i-yoga" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 8.5v5M7 10.5l5 1.5 5-1.5M5 19c2.5-.2 4.3-1.2 7-4.5 2.7 3.3 4.5 4.3 7 4.5M8 19.5h8"/></g></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M10 7c-3 .6-5 3-5 6.2V18h5v-5H7.4c.2-1.8 1.2-3 2.6-3.6V7Zm9 0c-3 .6-5 3-5 6.2V18h5v-5h-2.6c.2-1.8 1.2-3 2.6-3.6V7Z" fill="currentColor"/></symbol>
 </svg>
 
 <a class="skip" href="#main">Перейти до змісту</a>
@@ -58,42 +76,44 @@
 <!-- ============ ХЕДЕР ============ -->
 <header class="hdr" data-hdr>
   <div class="hdr__bar">
-    <nav class="hdr__nav hdr__nav--left" aria-label="Розділи">
+    <nav class="hdr__nav" aria-label="Розділи">
       <a href="#rooms">Номери</a>
       <a href="#warmth">Сауна і чан</a>
       <a href="#kitchen">Кухня</a>
-      <a href="#mountains"><span data-only="winter">Скі-тур</span><span data-only="summer">Походи</span></a>
-    </nav>
-
-    <a class="hdr__logo" href="#top" aria-label="Оселя — на початок сторінки">
-      <img src="assets/logo/emblem_240.webp" srcset="assets/logo/emblem_240.webp 240w, assets/logo/emblem_480.webp 480w" sizes="132px" width="240" height="240" alt="Оселя">
-    </a>
-
-    <div class="hdr__nav hdr__nav--right">
+      <a href="#mountains">Скі-тур</a>
       <a href="retreat.html">Ретрити</a>
       <a href="#location">Як доїхати</a>
-      <div class="phone" data-phone>
-        <button class="phone__btn" type="button" aria-expanded="false" aria-controls="phone-pop" data-phone-btn>
-          <span class="phone__codes" aria-hidden="true"><span>093</span><span>096</span><span>099</span></span>
-          <span class="phone__num">09 01234</span>
-          <span class="sr">Телефони: 093, 096 або 099 і далі 09 01234</span>
-        </button>
-        <div class="phone__pop" id="phone-pop" hidden>
-          <a href="tel:+380960901234"><span>096 09 01234</span><small>Київстар</small></a>
-          <a href="tel:+380990901234"><span>099 09 01234</span><small>Vodafone</small></a>
-          <a href="tel:+380930901234"><span>093 09 01234</span><small>lifecell</small></a>
-          <div class="phone__msg">
-            <a href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener"><svg><use href="#i-telegram"/></svg>Telegram</a>
-            <a href="viber://chat?number=%2B380960901234"><svg><use href="#i-viber"/></svg>Viber</a>
-          </div>
-        </div>
-      </div>
+    </nav>
+
+    <a class="hdr__logo" href="#top" aria-label="Оселя — на головну">
+      <img src="assets/logo/emblem_240.webp" srcset="assets/logo/emblem_240.webp 240w, assets/logo/emblem_480.webp 480w" sizes="148px" width="240" height="240" alt="Оселя">
+    </a>
+
+    <div class="hdr__right">
+      <a class="hdr__soc" href="https://www.instagram.com/oselia_dragobrat/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+      <button class="phone" type="button" aria-expanded="false" aria-controls="phone-pop" data-phone-btn>
+        <span class="phone__codes" aria-hidden="true"><span>093</span><span>096</span><span>099</span></span>
+        <span class="phone__num" aria-hidden="true">09 01234</span>
+        <span class="sr">Телефони: 093, 096 або 099 і далі 09 01234</span>
+      </button>
+      <a class="hdr__soc" href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
       <a class="btn btn--sm hdr__cta" href="#booking">Забронювати</a>
     </div>
 
     <div class="hdr__mob">
-      <a class="hdr__icon" href="tel:+380960901234" aria-label="Подзвонити: 096 09 01234"><svg><use href="#i-phone"/></svg></a>
+      <button class="hdr__icon" type="button" aria-label="Подзвонити" aria-expanded="false" aria-controls="phone-pop" data-phone-btn><svg><use href="#i-phone"/></svg></button>
       <button class="hdr__icon" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mnav" data-burger><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+
+  <div class="phone__pop" id="phone-pop" hidden data-phone-pop>
+    <p class="phone__title">Зателефонуйте на зручний номер</p>
+    <a href="tel:+380960901234"><svg><use href="#i-phone"/></svg><span>096 09 01234</span><small>Київстар</small></a>
+    <a href="tel:+380990901234"><svg><use href="#i-phone"/></svg><span>099 09 01234</span><small>Vodafone</small></a>
+    <a href="tel:+380930901234"><svg><use href="#i-phone"/></svg><span>093 09 01234</span><small>lifecell</small></a>
+    <div class="phone__msg">
+      <a href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener"><svg><use href="#i-telegram"/></svg>Telegram</a>
+      <a href="viber://chat?number=%2B380960901234"><svg><use href="#i-viber"/></svg>Viber</a>
     </div>
   </div>
 </header>
@@ -101,17 +121,15 @@
 <!-- Мобільне меню -->
 <div class="mnav" id="mnav" hidden data-mnav>
   <div class="mnav__top">
-    <div class="season" data-season-switch>
-      <button type="button" data-set-season="winter"><svg><use href="#i-snow"/></svg>Зима</button>
-      <button type="button" data-set-season="summer"><svg><use href="#i-sun"/></svg>Літо</button>
-    </div>
+    <img src="assets/logo/emblem_240.webp" width="64" height="64" alt="Оселя">
     <button class="hdr__icon" type="button" aria-label="Закрити меню" data-mnav-close><svg><use href="#i-close"/></svg></button>
   </div>
   <nav class="mnav__links" aria-label="Розділи">
     <a href="#rooms">Номери</a>
     <a href="#warmth">Сауна, чан і чайна церемонія</a>
     <a href="#kitchen">Кухня</a>
-    <a href="#mountains"><span data-only="winter">Скі-тур і прокат</span><span data-only="summer">Походи в гори</span></a>
+    <a href="#mountains">Скі-тур</a>
+    <a href="#rent">Прокат спорядження</a>
     <a href="retreat.html">Ретрити</a>
     <a href="#location">Як доїхати</a>
     <a href="#reviews">Відгуки</a>
@@ -121,49 +139,50 @@
     <a href="tel:+380990901234">099 09 01234</a>
     <a href="tel:+380930901234">093 09 01234</a>
   </div>
+  <div class="social social--light">
+    <a href="https://www.instagram.com/oselia_dragobrat/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+    <a href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
+    <a href="viber://chat?number=%2B380960901234" aria-label="Viber"><svg><use href="#i-viber"/></svg></a>
+    <a href="https://www.facebook.com/oselia.dragobrat" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+    <a href="https://www.youtube.com/@oselia" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
+  </div>
   <a class="btn btn--full" href="#booking">Забронювати</a>
 </div>
+
 
 <main id="main">
 
 <!-- ============ СТАРТОВИЙ ЕКРАН ============ -->
 <section class="hero" id="top">
   <div class="hero__media" aria-hidden="true">
-    <video class="hero__video" data-only="winter" autoplay muted loop playsinline preload="metadata"
+    <video class="hero__video" autoplay muted loop playsinline preload="metadata"
       poster="assets/img/poster-hero-desktop.webp"
       data-src-desktop="assets/video/hero-desktop.mp4" data-src-mobile="assets/video/hero-mobile.mp4"
       data-poster-mobile="assets/img/poster-hero-mobile.webp"></video>
-    <div class="hero__summer" data-only="summer">
-      <img src="assets/img/summer-1.webp" alt="" loading="lazy">
-      <img src="assets/img/summer-2.webp" alt="" loading="lazy">
-    </div>
+  </div>
+
+  <div class="season season--hero" role="group" aria-label="Сезон">
+    <button type="button" class="is-on" aria-pressed="true"><svg><use href="#i-snow"/></svg>Зима</button>
+    <button type="button" data-summer aria-pressed="false"><svg><use href="#i-sun"/></svg>Літо</button>
   </div>
 
   <div class="hero__inner wrap">
     <div class="hero__text">
-      <p class="hero__place">Драгобрат, 1350 м над рівнем моря</p>
+      <p class="hero__place"><svg><use href="#i-peak"/></svg>Драгобрат, 1350 м над рівнем моря</p>
       <h1 class="hero__title">Твій дім <br>в обіймах Карпат</h1>
-      <p class="hero__lead" data-only="winter">Затишний готель із прямим виходом на трасу «Карпатської Чайки». Після схилів — сауна, гарячий чан у лісі та домашня кухня, а зранку — скі-тур з нашими гідами.</p>
-      <p class="hero__lead" data-only="summer">Готель серед смерекового лісу з видом на Говерлу й Петрос. Походи Свидовцем до льодовикових озер, чан під відкритим небом і домашня кухня після дня в горах.</p>
+      <p class="hero__lead">Затишний готель із прямим виїздом з траси «Карпатської Чайки». Після схилів — сауна, гарячий чан у лісі та домашня кухня, а зранку — скі-тур з нашими гідами.</p>
       <div class="hero__actions">
         <a class="btn btn--light" href="#booking">Забронювати</a>
         <a class="btn btn--ghost" href="#rooms">Дивитися номери</a>
       </div>
     </div>
-
-    <div class="hero__side">
-      <a class="gbadge" href="https://maps.app.goo.gl/ySizuJYqATpn1PT56" target="_blank" rel="noopener">
-        <span class="gbadge__score">4,9</span>
-        <span class="gbadge__meta">
-          <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-          <span>209 відгуків у Google</span>
-        </span>
-      </a>
-      <div class="season season--hero" data-season-switch role="group" aria-label="Сезон">
-        <button type="button" data-set-season="winter"><svg><use href="#i-snow"/></svg>Зима</button>
-        <button type="button" data-set-season="summer"><svg><use href="#i-sun"/></svg>Літо</button>
-      </div>
-    </div>
+    <a class="gbadge" href="https://maps.app.goo.gl/ySizuJYqATpn1PT56" target="_blank" rel="noopener">
+      <span class="gbadge__score">4,9</span>
+      <span class="gbadge__meta">
+        <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+        <span>209 відгуків у Google</span>
+      </span>
+    </a>
   </div>
   <a class="hero__scroll" href="#why" aria-label="Гортати далі"><span></span></a>
 </section>
@@ -174,29 +193,29 @@
     <h2 class="h2 why__title">Чому гості повертаються до Оселі</h2>
     <ul class="why__list">
       <li>
-        <svg class="why__ic"><use href="#i-ski"/></svg>
+        <span class="ic"><svg><use href="#i-peak"/></svg></span>
         <h3>Розміщення та локація</h3>
-        <p>Високогірна частина курорту, між крісельним витягом «Карпатська Чайка» та бугельним комплексом «Оаза». З траси «Карпатської Чайки» — прямий виїзд до готелю.</p>
+        <p>Високогірна частина курорту, між крісельним витягом <b>«Карпатська Чайка»</b> та бугельним комплексом <b>«Оаза»</b>. З траси «Карпатської Чайки» — <b>прямий виїзд до готелю</b>.</p>
       </li>
       <li>
-        <svg class="why__ic"><use href="#i-car"/></svg>
+        <span class="ic"><svg><use href="#i-route"/></svg></span>
         <h3>Трансфер і логістика</h3>
-        <p>Зустрінемо в аеропорту чи на вокзалі Івано-Франківська, Рахова, Коломиї, Чернівців, Львова або Косова та організуємо підйом з Ясіня на Драгобрат.</p>
+        <p><b>Зустрінемо в аеропорту чи на вокзалі</b> Івано-Франківська, Рахова, Коломиї, Чернівців, Львова або Косова та <b>організуємо підйом з Ясіня</b> на Драгобрат.</p>
       </li>
       <li>
-        <svg class="why__ic"><use href="#i-parking"/></svg>
+        <span class="ic"><svg><use href="#i-parking"/></svg></span>
         <h3>Паркування</h3>
-        <p>Власна парковка біля готелю. За потреби організуємо паркування вашого авто внизу, у Ясіні.</p>
+        <p><b>Власна парковка</b> біля готелю. За потреби організуємо паркування вашого авто внизу, у Ясіні.</p>
       </li>
       <li>
-        <svg class="why__ic"><use href="#i-medic"/></svg>
+        <span class="ic"><svg><use href="#i-medic"/></svg></span>
         <h3>Комфорт і безпека</h3>
-        <p>Оселя — єдиний готель на Драгобраті, де перебувають парамедики громадської організації «ASAP Rescue», що проводить рятувальні операції в небезпечних ситуаціях.</p>
+        <p>Оселя — <b>єдиний готель на Драгобраті, де перебувають парамедики</b> громадської організації «ASAP Rescue», що проводить рятувальні операції в небезпечних ситуаціях.</p>
       </li>
-      <li>
-        <svg class="why__ic"><use href="#i-people"/></svg>
+      <li class="why__wide">
+        <span class="ic"><svg><use href="#i-people"/></svg></span>
         <h3>Відпочинок і робота</h3>
-        <p>Усе для молодих і активних та для досвідчених і вимогливих — з особливою увагою до родин з дітьми. Для корпоративів і тренінгів: хол на 40 осіб, Wi-Fi, проєктор, екран і фліпчарти.</p>
+        <p>Усе для молодих і активних та для досвідчених і вимогливих — з <b>особливою увагою до родин з дітьми</b>. Для корпоративів і тренінгів: <b>хол на 40 осіб</b>, <b>Wi-Fi</b>, <b>медіапроєктор, екран і фліпчарти</b>.</p>
       </li>
     </ul>
   </div>
@@ -204,19 +223,48 @@
 
 <!-- ============ ПРО НАС ============ -->
 <section class="about" id="about">
-  <div class="wrap about__grid">
-    <figure class="about__media ridge">
-      <video src="assets/video/about.mp4" poster="assets/img/poster-about.webp" muted loop playsinline preload="none" data-autoplay aria-label="Чайна церемонія з видом на засніжений ліс"></video>
-    </figure>
-    <div class="about__text">
-      <h2 class="h2">Українська гостинність високо в горах</h2>
-      <p class="lead">Ми пропонуємо гостям неперевершений досвід перебування в гірському оточенні: затишні номери з вражаючим видом на гори, теплу сауну в готелі, чан під відкритим небом і найбільший в Україні прокат скітурного спорядження.</p>
-      <p>Кожен гість для нас — унікальна історія, тому ми прагнемо зробити кожне ваше перебування особливим. Наша філософія базується на цінностях української гостинності, вишуканому комфорті та сімейному затишку. Ми дбаємо про кожну деталь — від першого привітання до останнього ранку на балконі.</p>
-      <dl class="facts">
-        <div><dt>1350 м</dt><dd>висота, на якій стоїть готель</dd></div>
-        <div><dt>Говерла й Петрос</dt><dd>видно з вікон номерів</dd></div>
-        <div><dt>До 8 гостей</dt><dd>вміщує наш гарячий чан</dd></div>
-      </dl>
+  <div class="wrap">
+    <h2 class="about__title">
+      Українська <span class="pill"><img src="assets/img/rev/tetiana-1.webp" alt=""></span> гостинність
+      високо <span class="pill pill--round"><img src="assets/img/rev/luba-0.webp" alt=""></span> в горах
+    </h2>
+    <div class="about__grid">
+      <figure class="about__media ridge">
+        <video src="assets/video/about.mp4" poster="assets/img/poster-about.webp" muted loop playsinline preload="none" data-autoplay aria-label="Чайна церемонія з видом на засніжений ліс"></video>
+      </figure>
+      <div class="about__text">
+        <p class="lead">Ми пропонуємо гостям неперевершений досвід перебування в гірському оточенні: затишні номери з <b>вражаючим видом на гори</b>, теплу сауну в готелі, чан під відкритим небом і <b>найбільший в Україні прокат скітурного спорядження</b>.</p>
+        <p>Кожен гість для нас — унікальна історія, тому ми прагнемо зробити кожне ваше перебування особливим. Наша філософія базується на цінностях <b>української гостинності</b>, вишуканому комфорті та <b>сімейному затишку</b>. Ми дбаємо про кожну деталь — від першого привітання до останнього ранку на балконі.</p>
+        <ul class="ticks">
+          <li><svg><use href="#i-sunrise"/></svg>Світанок над Чорногорою — просто з вікна номера</li>
+          <li><svg><use href="#i-cup"/></svg>Чайна церемонія під вінілові платівки</li>
+          <li><svg><use href="#i-leaf"/></svg>Сортуємо сміття та маємо власні очисні споруди</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ЦИФРИ ============ -->
+<section class="nums" id="numbers">
+  <div class="bg-ridge" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 class="h2 nums__title">Оселя в цифрах</h2>
+    <div class="nums__grid">
+      <ul class="nums__col nums__col--l">
+        <li><b>1350 м</b><span>висота, на якій стоїть готель</span></li>
+        <li><b>6 міст</b><span>звідки організуємо трансфер</span></li>
+        <li><b>40 осіб</b><span>вміщує хол для подій і тренінгів</span></li>
+      </ul>
+      <figure class="nums__circle">
+        <video src="assets/video/sunrise.mp4" poster="assets/img/poster-sunrise.webp" muted loop playsinline preload="none" data-autoplay aria-label="Світанок над Карпатами біля Оселі"></video>
+        <svg class="nums__ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ring" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs><text><textPath href="#ring">Драгобрат · Свидовець · Оселя · Драгобрат · Свидовець · Оселя ·</textPath></text></svg>
+      </figure>
+      <ul class="nums__col nums__col--r">
+        <li><b>до 8 гостей</b><span>одночасно в гарячому чані</span></li>
+        <li><b>15–20 осіб</b><span>у залі для йоги з видом на гори</span></li>
+        <li><b>№ 1</b><span>прокат скітурного спорядження в Україні</span></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -226,64 +274,58 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h2">Номери</h2>
-      <p>Усі номери — з власною ванною кімнатою. Вартість залежить від дат і кількості гостей: точну ціну підкажемо в месенджері.</p>
+      <p>Усі номери — з <b>власною ванною кімнатою</b>. Вартість залежить від дат і кількості гостей: точну ціну підкажемо в месенджері.</p>
     </div>
-    <div class="rooms__grid" data-rooms>
-      <!-- картки підвантажуються з data/rooms.json -->
-    </div>
+    <div class="rooms__grid" data-rooms></div>
   </div>
 </section>
 
-<!-- ============ САУНА, ЧАН, ЧАЙ ============ -->
+<!-- ============ САУНА І ЧАН ============ -->
 <section class="warmth" id="warmth">
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h2">Тепло після гір</h2>
-      <p>Сауна, гарячий чан у лісі та чайна церемонія з видом на вершини. Бронюйте час заздалегідь — особливо у вихідні.</p>
+      <p>Сауна в готелі та гарячий чан у смерековому лісі. <b>Бронюйте час заздалегідь</b> — особливо у вихідні.</p>
     </div>
-
-    <article class="spa spa--sauna">
-      <div class="spa__photos">
-        <img class="ridge" src="assets/img/sauna-1-s.webp" srcset="assets/img/sauna-1-s.webp 800w, assets/img/sauna-1.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Фінська сауна з дерев'яними полицями" loading="lazy" width="1600" height="1200">
-        <img src="assets/img/sauna-4-s.webp" alt="Басейн з холодною водою біля сауни" loading="lazy" width="800" height="800">
-        <img src="assets/img/sauna-2-s.webp" alt="Кімната відпочинку з шезлонгами" loading="lazy" width="800" height="600">
-      </div>
-      <div class="spa__text">
-        <h3 class="h3">Сауна</h3>
-        <p>Справжній оазис розслаблення: фінська сауна на 3–4 особи, невеликий басейн, щоб миттєво охолонути, та окрема кімната для відпочинку.</p>
+    <div class="spa">
+      <article class="spa__item">
+        <div class="spa__media">
+          <img class="spa__main" src="assets/img/sauna-1-s.webp" srcset="assets/img/sauna-1-s.webp 800w, assets/img/sauna-1.webp 1600w" sizes="(max-width: 900px) 100vw, 45vw" alt="Фінська сауна з дерев'яними полицями" loading="lazy" width="1600" height="1200">
+          <img class="spa__inset" src="assets/img/sauna-4-s.webp" alt="Басейн з холодною водою" loading="lazy" width="800" height="800">
+        </div>
+        <div class="spa__head"><span class="ic"><svg><use href="#i-flame"/></svg></span><h3 class="h3">Сауна</h3></div>
+        <p>Фінська сауна на <b>3–4 особи</b>, невеликий басейн, щоб миттєво охолонути, та окрема кімната для відпочинку.</p>
         <ul class="price">
           <li><span>2 години, до 6 осіб</span><b>2 200 грн</b></li>
           <li><span>Кожна наступна година</span><b>+800 грн</b></li>
           <li><span>Кожна особа понад 6</span><b>+200 грн</b></li>
         </ul>
         <button class="btn btn--line" type="button" data-book="Сауна">Замовити сауну</button>
-      </div>
-    </article>
-
-    <article class="spa spa--chan">
-      <div class="spa__photos">
-        <img class="ridge" src="assets/img/chan-1-s.webp" srcset="assets/img/chan-1-s.webp 800w, assets/img/chan-1.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Чан і альтанка вночі в засніженому лісі" loading="lazy" width="1600" height="1600">
-        <img src="assets/img/chan-2.webp" alt="Відпочинок у гарячому чані" loading="lazy" width="625" height="625">
-      </div>
-      <div class="spa__text">
-        <h3 class="h3">Чан</h3>
-        <p>Великий чан під відкритим небом, закритий від вітру й снігу, — до 8 осіб одночасно. Тепла вода зігріє після дня на схилах, а поруч альтанка з каміном: посидіти з друзями між купаннями й приготувати м'ясо чи сосиски на вогні.</p>
+      </article>
+      <article class="spa__item spa__item--shift">
+        <div class="spa__media">
+          <img class="spa__main" src="assets/img/chan-1-s.webp" srcset="assets/img/chan-1-s.webp 800w, assets/img/chan-1.webp 1600w" sizes="(max-width: 900px) 100vw, 45vw" alt="Чан і альтанка вночі в засніженому лісі" loading="lazy" width="1600" height="1600">
+          <img class="spa__inset" src="assets/img/chan-2.webp" alt="Відпочинок у гарячому чані" loading="lazy" width="625" height="625">
+        </div>
+        <div class="spa__head"><span class="ic"><svg><use href="#i-tub"/></svg></span><h3 class="h3">Чан</h3></div>
+        <p>Великий чан під відкритим небом, <b>закритий від вітру й снігу</b>, — <b>до 8 осіб</b> одночасно. Поруч альтанка з каміном, щоб посидіти з друзями між купаннями й приготувати м'ясо на вогні.</p>
         <ul class="price">
           <li><span>2 години, до 8 осіб</span><b>3 000 грн</b></li>
           <li><span>Кожна наступна година</span><b>+1 000 грн</b></li>
           <li><span>Кожна особа понад 8</span><b>+200 грн</b></li>
         </ul>
         <button class="btn btn--line" type="button" data-book="Чан">Замовити чан</button>
-      </div>
-    </article>
+      </article>
+    </div>
 
     <article class="tea">
       <div class="tea__media">
         <video src="assets/video/tea-7.mp4" poster="assets/img/poster-tea-7.webp" muted loop playsinline preload="none" data-autoplay aria-label="Вінілова платівка під час чаювання"></video>
       </div>
       <div class="tea__text">
+        <span class="ic ic--light"><svg><use href="#i-cup"/></svg></span>
         <h3 class="h3">Чайна церемонія</h3>
-        <p>Подушки на підлозі, панорамне вікно на засніжений ліс і вінілова платівка. Неспішне чаювання в тиші — найкращий спосіб завершити день у горах.</p>
+        <p>Подушки на підлозі, <b>панорамне вікно на засніжений ліс</b> і вінілова платівка. Неспішне чаювання в тиші — найкращий спосіб завершити день у горах.</p>
         <p class="muted">За попереднім записом.</p>
         <button class="btn btn--line" type="button" data-book="Чайна церемонія">Записатися</button>
       </div>
@@ -295,12 +337,17 @@
 <!-- ============ КУХНЯ ============ -->
 <section class="kitchen" id="kitchen">
   <div class="wrap kitchen__grid">
-    <div class="kitchen__card">
+    <div class="kitchen__card" data-wave>
+      <svg class="kitchen__wave" aria-hidden="true"><path/></svg>
       <div class="kitchen__frame">
         <p class="kitchen__kicker">Сніданки й вечері для гостей</p>
         <h2 class="kitchen__title">Кухня Оселі</h2>
-        <p>Борщ і бограч, банош з бринзою, вареники, деруни та свіжа випічка до ранкової кави. Готуємо по-домашньому, з карпатським характером, і завжди маємо вегетаріанські страви.</p>
-        <svg class="kitchen__ornament" viewBox="0 0 120 24" aria-hidden="true"><path d="M2 12h28l6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8h28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <p>Борщ і бограч, <b>банош з бринзою</b>, вареники, деруни та <b>свіжа випічка до ранкової кави</b>. Готуємо по-домашньому, з карпатським характером, і завжди маємо вегетаріанські страви.</p>
+        <ul class="kitchen__tags">
+          <li><svg><use href="#i-bowl"/></svg>Домашні перші страви</li>
+          <li><svg><use href="#i-leaf"/></svg>Вегетаріанське меню</li>
+          <li><svg><use href="#i-clock"/></svg>Страви за передзамовленням</li>
+        </ul>
         <button class="btn" type="button" data-open-menu>Відкрити меню</button>
       </div>
     </div>
@@ -310,105 +357,109 @@
   </div>
 </section>
 
-<!-- ============ ГОРИ: СКІ-ТУР / ПОХОДИ ============ -->
-<section class="mount" id="mountains">
-  <div class="mount__ridge" aria-hidden="true"></div>
-
-  <!-- Зима: скі-тур -->
-  <div class="wrap" data-only="winter">
-    <div class="mount__head">
+<!-- ============ СКІ-ТУР ============ -->
+<section class="ski" id="mountains">
+  <div class="bg-ridge" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="ski__head">
       <h2 class="h2">Ми спеціалізуємось на скі-турі</h2>
-      <p class="lead">В Оселі — найбільший в Україні прокат скітурного спорядження. З нашими гідами-інструкторами ви підете в коротку мандрівку на 3–4 години або в довгу — на день чи кілька. Неважливо, як добре ви стоїте на лижах: за дві-три години відчуєте всі переваги ski-touring.</p>
-    </div>
-
-    <div class="trips">
-      <article class="trip">
-        <img class="ridge" src="assets/img/ski-3.webp" alt="Скітурист на засніженому схилі" loading="lazy" width="540" height="359">
-        <h3>Коротка мандрівка</h3>
-        <p class="trip__meta">5–6 км, 2–3 години</p>
-        <p>Недалеко: легкі підйоми та спуски, цікаві краєвиди й локації для фото.</p>
-        <p class="trip__price"><b>1 600 грн</b> група до 4 осіб<br><span>+200 грн за кожного додаткового учасника</span></p>
-      </article>
-      <article class="trip">
-        <img class="ridge" src="assets/img/ski-4.webp" alt="Скітурист на хребті з видом на гори" loading="lazy" width="540" height="360">
-        <h3>Мандрівка на пів дня</h3>
-        <p class="trip__meta">10–12 км, пів дня</p>
-        <p>Легкі підйоми та спуски, свіжий сніг і пухляк, неймовірні краєвиди та локації для фото.</p>
-        <p class="trip__price"><b>2 800 грн</b> група до 4 осіб<br><span>+350 грн за кожного додаткового учасника</span></p>
-      </article>
-      <article class="trip">
-        <img class="ridge" src="assets/img/ski-2.webp" alt="Група скітуристів піднімається на вершину" loading="lazy" width="670" height="449">
-        <h3>Денна мандрівка</h3>
-        <p class="trip__meta">близько 20 км, з ранку до вечора</p>
-        <p>Повноцінний день у горах з окремою зоною для фрірайд-катання.</p>
-        <p class="trip__price"><b>4 000 грн</b> група до 4 осіб<br><span>+500 грн за кожного додаткового учасника</span></p>
-      </article>
-    </div>
-
-    <div class="rent">
-      <div class="rent__photo">
-        <img src="assets/img/ski-1-s.webp" srcset="assets/img/ski-1-s.webp 800w, assets/img/ski-1.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Лижі прокату, встромлені в сніг" loading="lazy" width="1600" height="720">
-      </div>
-      <div class="rent__table">
-        <h3 class="h3">Оренда спорядження</h3>
-        <p class="muted">Ціна за день прокату</p>
-        <dl>
-          <div><dt>Лижі першого класу</dt><dd>700 грн</dd></div>
-          <div><dt>Лижі другого класу</dt><dd>600 грн</dd></div>
-          <div><dt>Лижі третього класу</dt><dd>500 грн</dd></div>
-          <div><dt>Черевики першого класу</dt><dd>300 грн</dd></div>
-          <div><dt>Черевики другого класу</dt><dd>200 грн</dd></div>
-          <div><dt>Лижні палки</dt><dd>100 грн</dd></div>
-        </dl>
-        <button class="btn btn--light" type="button" data-book="Скі-тур або прокат">Забронювати скі-тур або прокат</button>
-      </div>
+      <p class="lead">З нашими гідами-інструкторами ви підете в <b>коротку мандрівку на 3–4 години</b> або в довгу — <b>на день чи кілька</b>. Неважливо, як добре ви стоїте на лижах: за дві-три години відчуєте всі переваги ski-touring.</p>
     </div>
   </div>
+  <div class="marquee" aria-hidden="true"><div class="marquee__track"><span>Скі-тур · Свіжий сніг · Пухляк · Фрірайд · Гіди-інструктори · </span><span>Скі-тур · Свіжий сніг · Пухляк · Фрірайд · Гіди-інструктори · </span></div></div>
+  <div class="wrap">
+    <ol class="trips">
+      <li class="trip">
+        <img src="assets/img/ski-3.webp" alt="Скітурист на засніженому схилі" loading="lazy" width="540" height="359">
+        <div class="trip__body">
+          <h3>Коротка мандрівка</h3>
+          <p>Недалеко: легкі підйоми та спуски, цікаві краєвиди й локації для фото.</p>
+        </div>
+        <ul class="trip__meta">
+          <li><svg><use href="#i-route"/></svg>5–6 км</li>
+          <li><svg><use href="#i-clock"/></svg>2–3 години</li>
+        </ul>
+        <p class="trip__price"><b>1 600 грн</b><span>група до 4 осіб<br>+200 грн за учасника</span></p>
+      </li>
+      <li class="trip">
+        <img src="assets/img/ski-4.webp" alt="Скітурист на хребті з видом на гори" loading="lazy" width="540" height="360">
+        <div class="trip__body">
+          <h3>Мандрівка на пів дня</h3>
+          <p>Легкі підйоми та спуски, <b>свіжий сніг і пухляк</b>, неймовірні краєвиди та локації для фото.</p>
+        </div>
+        <ul class="trip__meta">
+          <li><svg><use href="#i-route"/></svg>10–12 км</li>
+          <li><svg><use href="#i-clock"/></svg>пів дня</li>
+        </ul>
+        <p class="trip__price"><b>2 800 грн</b><span>група до 4 осіб<br>+350 грн за учасника</span></p>
+      </li>
+      <li class="trip">
+        <img src="assets/img/ski-2.webp" alt="Група скітуристів піднімається на вершину" loading="lazy" width="670" height="449">
+        <div class="trip__body">
+          <h3>Денна мандрівка</h3>
+          <p>З ранку до вечора, з повноцінною <b>зоною для фрірайд-катання</b>.</p>
+        </div>
+        <ul class="trip__meta">
+          <li><svg><use href="#i-route"/></svg>≈ 20 км</li>
+          <li><svg><use href="#i-sunrise"/></svg>весь день</li>
+        </ul>
+        <p class="trip__price"><b>4 000 грн</b><span>група до 4 осіб<br>+500 грн за учасника</span></p>
+      </li>
+    </ol>
+    <div class="ski__cta">
+      <button class="btn btn--light" type="button" data-book="Скі-тур">Забронювати скі-тур</button>
+    </div>
+  </div>
+</section>
 
-  <!-- Літо: походи -->
-  <div class="wrap" data-only="summer">
-    <div class="mount__head">
-      <h2 class="h2">Походи Свидовцем</h2>
-      <p class="lead">Оселя стоїть поруч з найкращими природними місцями Карпатського високогір'я. Підкажемо маршрут на свій смак або організуємо похід з гідом — до вершин, озер і полонин.</p>
+<!-- ============ ПРОКАТ ============ -->
+<section class="rent" id="rent">
+  <div class="wrap rent__grid">
+    <div class="rent__visual">
+      <figure class="postcard">
+        <img src="assets/img/ski-1-s.webp" srcset="assets/img/ski-1-s.webp 800w, assets/img/ski-1.webp 1600w" sizes="(max-width: 900px) 90vw, 40vw" alt="Лижі прокату, встромлені в сніг" loading="lazy" width="1600" height="720">
+        <figcaption><span>Прокат Оселі</span><span>Драгобрат</span></figcaption>
+      </figure>
+      <div class="stamp" aria-hidden="true"><span>№1</span><small>в Україні</small></div>
     </div>
-    <div class="places">
-      <div class="places__col">
-        <h3 class="h3">Вершини</h3>
-        <ul>
-          <li><span>Близниця</span><b>1881 м</b></li>
-          <li><span>Великий Котел</span><b>1770 м</b></li>
-          <li><span>Догяска</span><b>1761 м</b></li>
-          <li><span>Ворожеска</span><b>1731 м</b></li>
-        </ul>
+    <div class="rent__text">
+      <h2 class="h2">Прокат спорядження</h2>
+      <p class="lead">В Оселі — <b>найбільший в Україні прокат скітурного спорядження</b>. Підберемо комплект під ваш рівень і підготуємо його до виходу.</p>
+      <div class="gear">
+        <div class="gear__row">
+          <span class="ic"><svg><use href="#i-ski"/></svg></span>
+          <h3>Лижі</h3>
+          <ul><li><small>І клас</small><b>700 грн</b></li><li><small>ІІ клас</small><b>600 грн</b></li><li><small>ІІІ клас</small><b>500 грн</b></li></ul>
+        </div>
+        <div class="gear__row">
+          <span class="ic"><svg><use href="#i-boot"/></svg></span>
+          <h3>Черевики</h3>
+          <ul><li><small>І клас</small><b>300 грн</b></li><li><small>ІІ клас</small><b>200 грн</b></li></ul>
+        </div>
+        <div class="gear__row">
+          <span class="ic"><svg><use href="#i-poles"/></svg></span>
+          <h3>Лижні палки</h3>
+          <ul><li><small>комплект</small><b>100 грн</b></li></ul>
+        </div>
       </div>
-      <div class="places__col">
-        <h3 class="h3">Льодовикові озера</h3>
-        <ul>
-          <li><span>Герешаска</span></li>
-          <li><span>Апшинець</span></li>
-          <li><span>Ворожеска</span></li>
-          <li><span>Івор</span></li>
-        </ul>
-      </div>
-      <div class="places__col places__col--text">
-        <h3 class="h3">Праліси й полонини</h3>
-        <p>Карпатські праліси з віковими соснами та буками, де майже немає впливу людини, і приальпійські луки з запашними травами й квітами. Ідеальні для прогулянок, медитацій і практик на природі.</p>
-        <button class="btn btn--light" type="button" data-book="Похід з гідом">Запитати про похід</button>
-      </div>
+      <p class="muted rent__note">Ціни за день прокату.</p>
+      <button class="btn" type="button" data-book="Прокат спорядження">Забронювати прокат</button>
     </div>
-    <figure class="places__photo ridge">
-      <img src="assets/img/summer-1.webp" alt="Літній Свидовець над готелем Оселя" loading="lazy" width="1100" height="706">
-    </figure>
   </div>
 </section>
 
 <!-- ============ РЕТРИТИ ============ -->
 <section class="retreat-teaser">
   <div class="wrap retreat-teaser__grid">
-    <img class="ridge" src="assets/img/retreat-nature.webp" alt="Гості на скелі серед смерекового лісу" loading="lazy" width="1024" height="1024">
+    <img class="ridge" src="assets/img/retreat-yoga.webp" alt="Заняття йогою в залі з великими вікнами" loading="lazy" width="1024" height="1024">
     <div>
       <h2 class="h2">Ретрити й корпоративи</h2>
-      <p class="lead">Простора зала для йоги на 15–20 осіб з великими вікнами на гори, хол на 40 осіб для тренінгів, харчування з урахуванням будь-яких дієт — вегетаріанство, веганство, без глютену.</p>
+      <p class="lead">Простора <b>зала для йоги на 15–20 осіб</b> з великими вікнами на гори, <b>хол на 40 осіб</b> для тренінгів і харчування з урахуванням будь-яких дієт.</p>
+      <ul class="ticks">
+        <li><svg><use href="#i-yoga"/></svg>Підлогу підготуємо для будь-яких практик</li>
+        <li><svg><use href="#i-leaf"/></svg>Вегетаріанство, веганство, без глютену</li>
+        <li><svg><use href="#i-peak"/></svg>Походи до місць сили Свидовця</li>
+      </ul>
       <a class="btn btn--line" href="retreat.html">Детальніше про ретрити</a>
     </div>
   </div>
@@ -419,7 +470,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h2">Як нас знайти</h2>
-      <p>Оселя — у високогірній частині Драгобрату, між «Карпатською Чайкою» та «Оазою». Звідси видно Говерлу, Петрос, Близницю і Хом'як.</p>
+      <p>Оселя — у високогірній частині Драгобрату, між «Карпатською Чайкою» та «Оазою». Звідси видно <b>Говерлу, Петрос, Близницю і Хом'як</b>.</p>
     </div>
     <div class="loc__grid">
       <div class="map">
@@ -435,18 +486,9 @@
         <p class="map__hint">Гортайте мапу вбік</p>
       </div>
       <div class="loc__info">
-        <div>
-          <h3>Трансфер</h3>
-          <p>Зустрінемо на вокзалі чи в аеропорту Івано-Франківська, Рахова, Коломиї, Чернівців, Львова або Косова.</p>
-        </div>
-        <div>
-          <h3>Підйом з Ясіня</h3>
-          <p>Організуємо підйом із Ясіня на Драгобрат — домовтеся про час заздалегідь.</p>
-        </div>
-        <div>
-          <h3>Парковка</h3>
-          <p>Власна парковка біля готелю або паркування внизу, в Ясіні.</p>
-        </div>
+        <div><span class="ic"><svg><use href="#i-train"/></svg></span><h3>Трансфер</h3><p>Зустрінемо на вокзалі чи в аеропорту Івано-Франківська, Рахова, Коломиї, Чернівців, Львова або Косова.</p></div>
+        <div><span class="ic"><svg><use href="#i-car"/></svg></span><h3>Підйом з Ясіня</h3><p>Організуємо підйом із Ясіня на Драгобрат — домовтеся про час заздалегідь.</p></div>
+        <div><span class="ic"><svg><use href="#i-parking"/></svg></span><h3>Парковка</h3><p>Власна парковка біля готелю або паркування внизу, в Ясіні.</p></div>
         <a class="btn btn--line" href="https://maps.app.goo.gl/ySizuJYqATpn1PT56" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Відкрити в Google Maps</a>
       </div>
     </div>
@@ -458,21 +500,21 @@
   <div class="wrap">
     <div class="sec-head sec-head--light">
       <h2 class="h2">Галерея</h2>
-      <p>Кадри з життя Оселі — взимку та влітку.</p>
+      <p>Кадри з життя Оселі: ранки, вечори й сніг.</p>
     </div>
     <div class="gal" data-gallery>
       <button class="gal__item gal__item--tall" data-src="assets/img/night.webp" data-type="img"><img src="assets/img/night-s.webp" alt="Оселя вночі з підсвіткою" loading="lazy"></button>
       <button class="gal__item" data-src="assets/video/tea-2.mp4" data-type="video"><img src="assets/img/poster-tea-2.webp" alt="Чай у керамічній чаші" loading="lazy"><svg class="gal__play"><use href="#i-play"/></svg></button>
-      <button class="gal__item" data-src="assets/img/summer-2.webp" data-type="img"><img src="assets/img/summer-2-s.webp" alt="Готель біля підніжжя Свидовця влітку" loading="lazy"></button>
+      <button class="gal__item" data-src="assets/img/rev/tetiana-0.webp" data-type="img"><img src="assets/img/rev/tetiana-0.webp" alt="Готель Оселя взимку" loading="lazy"></button>
+      <button class="gal__item gal__item--tall" data-src="assets/video/sunrise.mp4" data-type="video"><img src="assets/img/poster-sunrise.webp" alt="Світанок над Карпатами" loading="lazy"><svg class="gal__play"><use href="#i-play"/></svg></button>
       <button class="gal__item gal__item--wide" data-src="assets/img/rest-room.webp" data-type="img"><img src="assets/img/rest-room-s.webp" alt="Мансардна кімната з панорамним вікном" loading="lazy"></button>
       <button class="gal__item" data-src="assets/video/tea-4.mp4" data-type="video"><img src="assets/img/poster-tea-4.webp" alt="Чайна церемонія біля вікна" loading="lazy"><svg class="gal__play"><use href="#i-play"/></svg></button>
-      <button class="gal__item" data-src="assets/img/sauna-5.webp" data-type="img"><img src="assets/img/sauna-5-s.webp" alt="Басейн у сауні" loading="lazy"></button>
-      <button class="gal__item gal__item--tall" data-src="assets/img/tea-2.webp" data-type="img"><img src="assets/img/tea-2-s.webp" alt="Пуер для чайної церемонії" loading="lazy"></button>
+      <button class="gal__item" data-src="assets/img/rev/mariana-0.webp" data-type="img"><img src="assets/img/rev/mariana-0.webp" alt="Захід сонця над Свидовцем" loading="lazy"></button>
       <button class="gal__item" data-src="assets/img/double-1.webp" data-type="img"><img src="assets/img/double-1-s.webp" alt="Номер з балконом і видом на гори" loading="lazy"></button>
+      <button class="gal__item" data-src="assets/img/sauna-5.webp" data-type="img"><img src="assets/img/sauna-5-s.webp" alt="Басейн у сауні" loading="lazy"></button>
+      <button class="gal__item gal__item--wide" data-src="assets/img/rev/elena-1.webp" data-type="img"><img src="assets/img/rev/elena-1.webp" alt="Світанок над хмарами" loading="lazy"></button>
+      <button class="gal__item" data-src="assets/img/rev/tetiana-1.webp" data-type="img"><img src="assets/img/rev/tetiana-1.webp" alt="Кава на балконі з видом на ліс" loading="lazy"></button>
       <button class="gal__item" data-src="assets/video/tea-5.mp4" data-type="video"><img src="assets/img/poster-tea-5.webp" alt="Чайний куточок біля вікна" loading="lazy"><svg class="gal__play"><use href="#i-play"/></svg></button>
-      <button class="gal__item" data-src="assets/img/summer-1.webp" data-type="img"><img src="assets/img/summer-1-s.webp" alt="Свидовець влітку" loading="lazy"></button>
-      <button class="gal__item" data-src="assets/img/family-3.webp" data-type="img"><img src="assets/img/family-3-s.webp" alt="Чотиримісний номер" loading="lazy"></button>
-      <button class="gal__item gal__item--wide" data-src="assets/img/ski-1.webp" data-type="img"><img src="assets/img/ski-1-s.webp" alt="Лижі прокату в снігу" loading="lazy"></button>
     </div>
   </div>
 </section>
@@ -493,7 +535,9 @@
         <button type="button" class="round" aria-label="Наступні відгуки" data-rev-next><svg><use href="#i-arrow"/></svg></button>
       </div>
     </div>
-    <div class="reviews__track" data-reviews tabindex="0" aria-label="Відгуки гостей"></div>
+  </div>
+  <div class="reviews__track" data-reviews tabindex="0" aria-label="Відгуки гостей"></div>
+  <div class="wrap">
     <a class="link" href="https://maps.app.goo.gl/ySizuJYqATpn1PT56" target="_blank" rel="noopener">Читати всі відгуки в Google</a>
   </div>
 </section>
@@ -503,34 +547,32 @@
   <div class="wrap booking__grid">
     <div class="booking__intro">
       <h2 class="h2">Забронювати</h2>
-      <p class="lead">Оберіть, що бронюєте, і дати. Ми отримаємо готове повідомлення в Telegram або Viber і відповімо з точною ціною та вільними номерами.</p>
+      <p class="lead">Оберіть номер чи послугу і дати. Ми отримаємо готове повідомлення в Telegram або Viber і відповімо з точною ціною та вільними номерами.</p>
       <div class="booking__phones">
-        <a href="tel:+380960901234">096 09 01234</a>
-        <a href="tel:+380990901234">099 09 01234</a>
-        <a href="tel:+380930901234">093 09 01234</a>
-        <a href="mailto:oselia.dragobrat@gmail.com">oselia.dragobrat@gmail.com</a>
+        <a href="tel:+380960901234"><svg><use href="#i-phone"/></svg>096 09 01234</a>
+        <a href="tel:+380990901234"><svg><use href="#i-phone"/></svg>099 09 01234</a>
+        <a href="tel:+380930901234"><svg><use href="#i-phone"/></svg>093 09 01234</a>
+        <a href="mailto:oselia.dragobrat@gmail.com"><svg><use href="#i-mail"/></svg>oselia.dragobrat@gmail.com</a>
       </div>
     </div>
 
     <form class="bform" data-booking novalidate>
       <fieldset class="bform__what">
         <legend>Що бронюємо</legend>
-        <div class="chips" data-chips>
+        <div class="chips">
           <label><input type="radio" name="what" value="Номер" checked><span>Номер</span></label>
           <label><input type="radio" name="what" value="Сауна"><span>Сауна</span></label>
           <label><input type="radio" name="what" value="Чан"><span>Чан</span></label>
           <label><input type="radio" name="what" value="Чайна церемонія"><span>Чайна церемонія</span></label>
-          <label data-only="winter"><input type="radio" name="what" value="Скі-тур або прокат"><span>Скі-тур / прокат</span></label>
-          <label data-only="summer"><input type="radio" name="what" value="Похід з гідом"><span>Похід з гідом</span></label>
+          <label><input type="radio" name="what" value="Скі-тур"><span>Скі-тур</span></label>
+          <label><input type="radio" name="what" value="Прокат спорядження"><span>Прокат</span></label>
         </div>
       </fieldset>
 
-      <label class="field" data-room-field>
-        <span>Номер</span>
-        <select name="room" data-room-select>
-          <option value="Будь-який вільний">Будь-який вільний</option>
-        </select>
-      </label>
+      <fieldset class="bform__rooms" data-room-field>
+        <legend>Номер</legend>
+        <div class="rpick" data-room-pick></div>
+      </fieldset>
 
       <div class="field-row">
         <label class="field"><span data-date-label-in>Заїзд</span><input type="date" name="in" required></label>
@@ -540,7 +582,7 @@
       <div class="field-row">
         <div class="field">
           <span>Гостей</span>
-          <div class="stepper" data-stepper>
+          <div class="stepper">
             <button type="button" aria-label="Менше гостей" data-step="-1"><svg><use href="#i-minus"/></svg></button>
             <input type="number" name="guests" value="2" min="1" max="40" inputmode="numeric" aria-label="Кількість гостей">
             <button type="button" aria-label="Більше гостей" data-step="1"><svg><use href="#i-plus"/></svg></button>
@@ -566,9 +608,10 @@
 
 <!-- ============ ФУТЕР ============ -->
 <footer class="ftr">
+  <div class="bg-ridge" aria-hidden="true"></div>
   <div class="wrap ftr__grid">
     <div class="ftr__brand">
-      <img src="assets/logo/emblem_240.webp" width="96" height="96" alt="Оселя" loading="lazy">
+      <img src="assets/logo/emblem_240.webp" width="104" height="104" alt="Оселя" loading="lazy">
       <p>Готель «Оселя»<br>Драгобрат, смт Ясіня,<br>Закарпатська область</p>
     </div>
     <div>
@@ -583,14 +626,16 @@
       <a href="#rooms">Номери</a>
       <a href="#warmth">Сауна і чан</a>
       <a href="#kitchen">Кухня</a>
+      <a href="#rent">Прокат</a>
       <a href="retreat.html">Ретрити</a>
       <a href="#location">Як доїхати</a>
     </div>
     <div>
       <h3>Ми в соцмережах</h3>
-      <div class="social">
+      <div class="social social--light">
         <a href="https://www.instagram.com/oselia_dragobrat/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
         <a href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
+        <a href="viber://chat?number=%2B380960901234" aria-label="Viber"><svg><use href="#i-viber"/></svg></a>
         <a href="https://www.facebook.com/oselia.dragobrat" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
         <a href="https://www.youtube.com/@oselia" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
       </div>
@@ -602,13 +647,14 @@
   </div>
 </footer>
 
-<!-- ============ МОДАЛКИ ============ -->
-<div class="modal" data-modal="room" hidden>
-  <div class="modal__backdrop" data-close></div>
-  <div class="modal__box modal__box--room" role="dialog" aria-modal="true" aria-labelledby="room-title">
-    <button class="modal__x round" type="button" aria-label="Закрити" data-close><svg><use href="#i-close"/></svg></button>
-    <div class="rm" data-room-modal></div>
-  </div>
+
+<!-- ============ НОМЕР: БОКОВА ПАНЕЛЬ ============ -->
+<div class="drawer" data-drawer hidden>
+  <div class="drawer__bg" data-close></div>
+  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="room-title">
+    <button class="drawer__x round" type="button" aria-label="Закрити" data-close><svg><use href="#i-close"/></svg></button>
+    <div data-room-drawer></div>
+  </aside>
 </div>
 
 <div class="modal" data-modal="menu" hidden>

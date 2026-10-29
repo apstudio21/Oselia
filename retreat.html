@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="uk">
+<html lang="uk" data-season="winter">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -15,42 +15,60 @@
 <link rel="preload" href="assets/fonts/kurale-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/onest-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/styles.css">
-<script>
-  // Сезон обирається до відмалювання сторінки, щоб не було «стрибка»
-  (function () {
-    var s = 'winter';
-    try {
-      var q = new URLSearchParams(location.search).get('season');
-      s = q === 'summer' || q === 'winter' ? q : (localStorage.getItem('oselia-season') || 'winter');
-    } catch (e) {}
-    document.documentElement.setAttribute('data-season', s);
-  })();
-</script>
 </head>
 <body class="page-retreat">
-
 <svg class="sprite" aria-hidden="true">
+  <symbol id="i-telegram" viewBox="0 0 700 584"><path fill="currentColor" transform="translate(-50 -116.667)" d="M690.322,121.817C690.322,121.817 755.077,96.567 749.68,157.888C747.882,183.138 731.693,271.513 719.102,367.103L675.932,650.265C675.932,650.265 672.335,691.747 639.957,698.962C607.578,706.175 559.013,673.712 550.018,666.497C542.823,661.087 415.113,579.925 370.143,540.247C357.552,529.425 343.162,507.782 371.942,482.532L560.812,302.175C582.397,280.532 603.982,230.032 514.043,291.353L262.218,462.693C262.218,462.693 233.438,480.728 179.477,464.497L62.557,428.425C62.557,428.425 19.387,401.372 93.136,374.317C273.012,289.548 494.258,202.977 690.322,121.817Z"/></symbol>
+  <symbol id="i-viber" viewBox="-0.5 -0.45 23.6 24.9"><path fill="currentColor" d="M20.19,2.337C19.595,1.792 17.185,0.04 11.818,0.017C11.818,0.017 5.485,-0.362 2.4,2.469C0.684,4.185 0.083,6.698 0.014,9.815C-0.055,12.932 -0.132,18.774 5.499,20.362L5.504,20.362L5.499,22.781C5.499,22.781 5.462,23.761 6.106,23.958C6.884,24.202 7.344,23.456 8.089,22.654C8.497,22.213 9.059,21.567 9.486,21.074C10.086,21.133 10.782,21.166 11.487,21.166C13.314,21.166 15.089,20.941 16.785,20.517L16.635,20.549C17.413,20.296 21.815,19.733 22.527,13.892C23.271,7.862 22.173,4.058 20.19,2.337ZM20.842,13.452C20.235,18.327 16.669,18.637 16.013,18.847C14.581,19.211 12.937,19.419 11.244,19.419C10.758,19.419 10.276,19.402 9.799,19.368L9.863,19.372C9.863,19.372 7.425,22.311 6.666,23.075C6.418,23.323 6.145,23.303 6.15,22.808C6.15,22.485 6.169,18.79 6.169,18.79C1.402,17.468 1.678,12.492 1.734,9.893C1.79,7.294 2.278,5.158 3.731,3.724C6.343,1.357 11.72,1.708 11.72,1.708C16.263,1.727 18.438,3.096 18.944,3.555C20.618,4.99 21.471,8.422 20.842,13.451L20.842,13.452ZM14.331,9.664L14.331,9.678C14.331,9.846 14.195,9.982 14.027,9.982C13.864,9.982 13.731,9.854 13.724,9.693L13.724,9.692C13.728,9.65 13.731,9.6 13.731,9.551C13.731,8.75 13.082,8.101 12.281,8.101C12.251,8.101 12.221,8.102 12.192,8.104L12.196,8.104C12.035,8.095 11.908,7.963 11.908,7.801C11.908,7.633 12.044,7.497 12.212,7.497L12.229,7.497L12.228,7.497C12.248,7.496 12.273,7.496 12.297,7.496C13.423,7.496 14.335,8.408 14.335,9.534C14.335,9.58 14.333,9.626 14.33,9.671L14.33,9.665L14.331,9.664ZM15.282,10.195C15.329,8.207 14.087,6.651 11.729,6.477C11.57,6.466 11.446,6.334 11.446,6.174C11.446,6.006 11.582,5.87 11.75,5.87C11.757,5.87 11.765,5.87 11.772,5.871L11.771,5.871L11.788,5.871C14.055,5.871 15.894,7.709 15.894,9.977C15.894,10.058 15.892,10.139 15.887,10.219L15.888,10.208C15.884,10.373 15.75,10.504 15.585,10.504C15.417,10.504 15.281,10.368 15.281,10.2L15.281,10.192L15.282,10.195ZM17.482,10.824L17.482,10.826C17.482,10.994 17.346,11.13 17.178,11.13C17.01,11.13 16.876,10.995 16.875,10.829C16.851,7.007 14.302,4.926 11.213,4.904C11.045,4.904 10.91,4.768 10.91,4.601C10.91,4.434 11.046,4.298 11.213,4.298C14.672,4.322 17.452,6.709 17.48,10.823L17.482,10.824ZM16.957,15.422L16.957,15.431C16.451,16.322 15.504,17.306 14.529,16.992L14.52,16.978C12.688,16.294 11.104,15.4 9.689,14.299L9.73,14.329C8.987,13.737 8.334,13.084 7.761,12.366L7.742,12.341C7.233,11.703 6.756,10.989 6.34,10.235L6.3,10.156C5.843,9.41 5.43,8.548 5.107,7.643L5.077,7.545C4.763,6.57 5.742,5.623 6.638,5.117L6.647,5.117C6.777,5.034 6.935,4.984 7.105,4.984C7.372,4.984 7.61,5.107 7.767,5.298L7.768,5.3C7.768,5.3 8.349,5.993 8.598,6.336C8.832,6.655 9.147,7.166 9.31,7.451C9.404,7.598 9.459,7.778 9.459,7.971C9.459,8.259 9.335,8.518 9.137,8.697L9.136,8.698L8.574,9.148C8.419,9.298 8.323,9.508 8.323,9.74C8.323,9.763 8.324,9.785 8.326,9.807L8.326,9.804C8.905,11.707 10.374,13.176 12.236,13.745L12.278,13.756C12.297,13.758 12.32,13.759 12.342,13.759C12.574,13.759 12.784,13.663 12.934,13.509L13.384,12.947C13.564,12.748 13.823,12.624 14.111,12.624C14.304,12.624 14.483,12.68 14.635,12.776L14.631,12.774C15.444,13.237 16.147,13.746 16.788,14.323L16.777,14.313C16.969,14.467 17.09,14.702 17.09,14.965C17.09,15.134 17.04,15.291 16.953,15.423L16.955,15.42L16.957,15.422Z"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5 9 3l1.8 4.3-2.2 1.6a12 12 0 0 0 6.5 6.5l1.6-2.2L21 15l-.5 2.4a2.6 2.6 0 0 1-2.6 2.1A15.4 15.4 0 0 1 4.5 6.1 2.6 2.6 0 0 1 6.6 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
-  <symbol id="i-telegram" viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.3c-1 .4-1 1.5.1 1.8l4.6 1.4 1.8 5.5c.2.7 1.1.9 1.6.4l2.6-2.4 4.8 3.5c.7.5 1.6.1 1.8-.7l3-14.6c.2-1-.8-1.8-1.8-1.4ZM9.6 14.2l8.6-7.7-6.9 9-.3 3-1.4-4.3Z" fill="currentColor"/></symbol>
-  <symbol id="i-viber" viewBox="0 0 24 24"><path d="M12 2.5c-4.6 0-8.3 2.8-8.3 7.6 0 2.7 1 4.6 2.8 5.8v3.6c0 .5.6.8 1 .4l2.6-2.7c.6.1 1.2.1 1.9.1 4.6 0 8.3-2.8 8.3-7.2S16.6 2.5 12 2.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.2 7.3c.3-.2.7-.2.9.1l.8 1.2c.2.3.1.7-.1.9l-.4.3c.4 1 1.2 1.9 2.2 2.4l.4-.4c.2-.3.6-.3.9-.1l1.2.8c.3.2.4.6.1.9-.6.8-1.5 1-2.4.6a7.4 7.4 0 0 1-4-4.1c-.3-.9 0-1.8.4-2.6Z" fill="currentColor"/></symbol>
-  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
   <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M13.5 21v-7.4h2.6l.4-3h-3V8.7c0-.9.3-1.5 1.5-1.5h1.6V4.5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3Z" fill="currentColor"/></symbol>
   <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M21.2 7.6a2.5 2.5 0 0 0-1.8-1.8C17.9 5.4 12 5.4 12 5.4s-5.9 0-7.4.4a2.5 2.5 0 0 0-1.8 1.8C2.4 9.1 2.4 12 2.4 12s0 2.9.4 4.4c.2.9.9 1.6 1.8 1.8 1.5.4 7.4.4 7.4.4s5.9 0 7.4-.4c.9-.2 1.6-.9 1.8-1.8.4-1.5.4-4.4.4-4.4s0-2.9-.4-4.4ZM10.1 14.8V9.2l4.9 2.8-4.9 2.8Z" fill="currentColor"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4.5 7 7.5 6 7.5-6"/></g></symbol>
   <symbol id="i-snow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6"/><path d="m9.5 4.2 2.5 2 2.5-2M9.5 19.8l2.5-2 2.5 2M4.4 10.4l3.1-.6-1-3M19.6 13.6l-3.1.6 1 3M4.4 13.6l3.1.6-1 3M19.6 10.4l-3.1-.6 1-3"/></g></symbol>
   <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7"/></g></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z" fill="currentColor"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
   <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5L8 5.5Z" fill="currentColor"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 1 1 13 0C18.5 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
-  <symbol id="i-ski" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m3 20 9-15 9 15"/><path d="m8.5 11.2 2 1.4 1.5-1.6 1.5 1.6 2-1.4"/></g></symbol>
-  <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 16.5v-4l2-5.2c.2-.5.7-.8 1.2-.8h9.6c.5 0 1 .3 1.2.8l2 5.2v4H4Z"/><path d="M4 12.5h16"/><circle cx="7.6" cy="16.6" r="1.6"/><circle cx="16.4" cy="16.6" r="1.6"/></g></symbol>
-  <symbol id="i-parking" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 17V7.5h3a2.6 2.6 0 0 1 0 5.2h-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
-  <symbol id="i-medic" viewBox="0 0 24 24"><path d="M9.5 4h5v5.5H20v5h-5.5V20h-5v-5.5H4v-5h5.5V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
-  <symbol id="i-people" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="16.5" cy="9" r="2.4"/><path d="M15.5 14.1c2.6-.3 4.5 1.3 5 4.4"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 1 1 13 0C18.5 14.8 12 21 12 21Z"/><circle cx="12" cy="10" r="2.4"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
   <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M6 12h12M12 6v12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-peak" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m2.5 19.5 7-12 4 6.5 2.5-3.5 5.5 9z"/><path d="m7.6 10.8 1.9 1.4 1.7-1.6"/></g></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.2"/><path d="M18 9.8s-3.6-3.4-3.6-5.8a3.6 3.6 0 0 1 7.2 0c0 2.4-3.6 5.8-3.6 5.8Z"/><path d="M8.2 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h2.6" stroke-dasharray="2 2.2"/></g></symbol>
+  <symbol id="i-parking" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M10 17V7.5h3a2.6 2.6 0 0 1 0 5.2h-3"/></g></symbol>
+  <symbol id="i-medic" viewBox="0 0 24 24"><path d="M9.5 4h5v5.5H20v5h-5.5V20h-5v-5.5H4v-5h5.5V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="16.5" cy="9" r="2.4"/><path d="M15.5 14.1c2.6-.3 4.5 1.3 5 4.4"/></g></symbol>
+  <symbol id="i-area" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><rect x="8.5" y="8.5" width="7" height="7" rx="1"/></g></symbol>
+  <symbol id="i-guests" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c.8-3.8 3.6-6 7-6s6.2 2.2 7 6"/></g></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18.5V6M3 14h18v4.5M21 14v-2.5a2.5 2.5 0 0 0-2.5-2.5H11v5"/><circle cx="7" cy="11" r="1.8"/></g></symbol>
+  <symbol id="i-bath" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-2ZM6 12V6.5a2 2 0 0 1 3.7-1M7 19l-1 1.5M17 19l1 1.5"/></g></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8.5 20.5h7"/></g></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 9.5a13 13 0 0 1 18 0M6 12.8a8.6 8.6 0 0 1 12 0M9 16a4.2 4.2 0 0 1 6 0"/><circle cx="12" cy="19" r=".9" fill="currentColor"/></g></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21c-3.9 0-6.5-2.6-6.5-6.2 0-3.5 2.7-5.2 3.6-8.8 2 1.2 2.9 3 3 4.6 1-1 1.5-2.4 1.6-3.8 2.8 2 4.8 5 4.8 8 0 3.6-2.6 6.2-6.5 6.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s6 6.4 6 10.8a6 6 0 0 1-12 0C6 9.9 12 3.5 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-tub" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16l-1.3 7.2a2 2 0 0 1-2 1.8H7.3a2 2 0 0 1-2-1.8L4 11Z"/><path d="M8.5 8c0-1 1-1.4 1-2.5S8.5 4 8.5 3M12 8c0-1 1-1.4 1-2.5S12 4 12 3M15.5 8c0-1 1-1.4 1-2.5s-1-1.5-1-2.5"/></g></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h13v3.5a6.5 6.5 0 0 1-13 0V10Z"/><path d="M17 11.5h1.2a2.3 2.3 0 0 1 0 4.6H16.5M8.5 6.5c0-1 .8-1.3.8-2.2M12.5 6.5c0-1 .8-1.3.8-2.2"/></g></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8.5 5.5-13.5 15-14-.5 9.5-5.5 15-14 15"/><path d="M5 19c3-3.5 6-6.5 10-9"/></g></symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 9 0 0 1-18 0ZM9 20h6"/><path d="M9 8c0-1.2 1.2-1.6 1.2-3M13 8c0-1.2 1.2-1.6 1.2-3"/></g></symbol>
+  <symbol id="i-plate" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="5.5"/><path d="M3 4v5.5a1.5 1.5 0 0 0 3 0V4M4.5 11v9M21 4c-1.6.6-2.5 2.6-2.5 5.5 0 1 .6 1.5 1.5 1.5h1V20"/></g></symbol>
+  <symbol id="i-meat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 14.5c-3 3-8 2.7-9.6.3-1.6-2.4-.3-6.8 2.7-9.7 3-3 7.3-3.6 9.2-1.4 1.9 2.2.7 7.8-2.3 10.8Z"/><path d="m14.5 14.5 3.5 3.5M17.2 19.7a1.7 1.7 0 1 0 2.5-2.5 1.7 1.7 0 1 0-2.5 2.5Z"/></g></symbol>
+  <symbol id="i-fish" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12c2.6-3.6 6-5.4 9.5-5.4 3.6 0 6.3 2.2 8 5.4-1.7 3.2-4.4 5.4-8 5.4S5.1 15.6 2.5 12Z"/><path d="M20 12l2-3v6l-2-3"/><circle cx="7.5" cy="11" r=".9" fill="currentColor"/></g></symbol>
+  <symbol id="i-grain" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V8"/><path d="M12 8c0-2.6 1.4-4.2 3-5 .3 2.6-.8 4.4-3 5ZM12 8c0-2.6-1.4-4.2-3-5-.3 2.6.8 4.4 3 5ZM12 13c1.8-2.4 3.8-3 5.6-2.5-.8 2.2-2.8 3.2-5.6 2.5ZM12 13c-1.8-2.4-3.8-3-5.6-2.5.8 2.2 2.8 3.2 5.6 2.5ZM12 18c1.8-2.4 3.8-3 5.6-2.5-.8 2.2-2.8 3.2-5.6 2.5ZM12 18c-1.8-2.4-3.8-3-5.6-2.5.8 2.2 2.8 3.2 5.6 2.5Z"/></g></symbol>
+  <symbol id="i-salad" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18a9 9 0 0 1-18 0Z"/><path d="M7 12c-.5-2.8 1-4.5 3.4-4.5M12 12c0-3 1.6-5.5 4.6-5.5M15.5 12c.4-1.5 1.6-2.4 3-2.4"/></g></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="9" width="16" height="9" rx="2"/><path d="M18.5 13.5h3"/><path d="M6 9l3-4 4 4M9.5 13a1 1 0 1 0 0 .1"/></g></symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5h16V13a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5Z"/><path d="M4 15.5c1.3 1 2.7 1 4 0s2.7-1 4 0 2.7 1 4 0 2.7-1 4 0M12 11V8M12 5.5c-.8-.8-.8-1.8 0-2.5.8.7.8 1.7 0 2.5Z"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+  <symbol id="i-ski" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 3.5 6 20.5M12.5 3.5 11 20.5"/><path d="M6.8 3.6c.4-.6 1-.6 1.2 0M11.8 3.6c.4-.6 1-.6 1.2 0M5.5 12h2.5M10.5 12H13"/><path d="M18.5 3v18M17 16.5h3"/></g></symbol>
+  <symbol id="i-boot" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7l.5 9 4.6 2.2c.9.4 1.4 1.3 1.4 2.3v1.5H4.5V14L7 3.5Z"/><path d="M4.5 20.5h16M8 8h6M7.4 11h6.8"/></g></symbol>
+  <symbol id="i-poles" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l2.5 18M16 3l-2.5 18M7 3h2M15 3h2"/><circle cx="10.2" cy="18.8" r="1.6"/><circle cx="13.8" cy="18.8" r="1.6"/></g></symbol>
+  <symbol id="i-sunrise" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 17a5 5 0 0 1 10 0M3 20.5h18M12 3.5V9M9.5 6.5 12 9l2.5-2.5M4.2 12.2l1.5 1M19.8 12.2l-1.5 1"/></g></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="3.5" width="13" height="13" rx="3"/><path d="M5.5 10h13M9 13.5h.1M15 13.5h.1M8 20.5l1.5-4M16 20.5l-1.5-4"/></g></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 16.5v-4l2-5.2c.2-.5.7-.8 1.2-.8h9.6c.5 0 1 .3 1.2.8l2 5.2v4H4Z"/><path d="M4 12.5h16"/><circle cx="7.6" cy="16.6" r="1.6"/><circle cx="16.4" cy="16.6" r="1.6"/></g></symbol>
+  <symbol id="i-yoga" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 8.5v5M7 10.5l5 1.5 5-1.5M5 19c2.5-.2 4.3-1.2 7-4.5 2.7 3.3 4.5 4.3 7 4.5M8 19.5h8"/></g></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M10 7c-3 .6-5 3-5 6.2V18h5v-5H7.4c.2-1.8 1.2-3 2.6-3.6V7Zm9 0c-3 .6-5 3-5 6.2V18h5v-5h-2.6c.2-1.8 1.2-3 2.6-3.6V7Z" fill="currentColor"/></symbol>
 </svg>
 
 <a class="skip" href="#main">Перейти до змісту</a>
@@ -58,42 +76,44 @@
 <!-- ============ ХЕДЕР ============ -->
 <header class="hdr" data-hdr>
   <div class="hdr__bar">
-    <nav class="hdr__nav hdr__nav--left" aria-label="Розділи">
+    <nav class="hdr__nav" aria-label="Розділи">
       <a href="index.html#rooms">Номери</a>
       <a href="index.html#warmth">Сауна і чан</a>
       <a href="index.html#kitchen">Кухня</a>
-      <a href="index.html#mountains"><span data-only="winter">Скі-тур</span><span data-only="summer">Походи</span></a>
+      <a href="index.html#mountains">Скі-тур</a>
+      <a href="retreat.html" aria-current="page">Ретрити</a>
+      <a href="index.html#location">Як доїхати</a>
     </nav>
 
     <a class="hdr__logo" href="index.html" aria-label="Оселя — на головну">
-      <img src="assets/logo/emblem_240.webp" srcset="assets/logo/emblem_240.webp 240w, assets/logo/emblem_480.webp 480w" sizes="132px" width="240" height="240" alt="Оселя">
+      <img src="assets/logo/emblem_240.webp" srcset="assets/logo/emblem_240.webp 240w, assets/logo/emblem_480.webp 480w" sizes="148px" width="240" height="240" alt="Оселя">
     </a>
 
-    <div class="hdr__nav hdr__nav--right">
-      <a href="retreat.html" aria-current="page">Ретрити</a>
-      <a href="index.html#location">Як доїхати</a>
-      <div class="phone" data-phone>
-        <button class="phone__btn" type="button" aria-expanded="false" aria-controls="phone-pop" data-phone-btn>
-          <span class="phone__codes" aria-hidden="true"><span>093</span><span>096</span><span>099</span></span>
-          <span class="phone__num">09 01234</span>
-          <span class="sr">Телефони: 093, 096 або 099 і далі 09 01234</span>
-        </button>
-        <div class="phone__pop" id="phone-pop" hidden>
-          <a href="tel:+380960901234"><span>096 09 01234</span><small>Київстар</small></a>
-          <a href="tel:+380990901234"><span>099 09 01234</span><small>Vodafone</small></a>
-          <a href="tel:+380930901234"><span>093 09 01234</span><small>lifecell</small></a>
-          <div class="phone__msg">
-            <a href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener"><svg><use href="#i-telegram"/></svg>Telegram</a>
-            <a href="viber://chat?number=%2B380960901234"><svg><use href="#i-viber"/></svg>Viber</a>
-          </div>
-        </div>
-      </div>
+    <div class="hdr__right">
+      <a class="hdr__soc" href="https://www.instagram.com/oselia_dragobrat/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+      <button class="phone" type="button" aria-expanded="false" aria-controls="phone-pop" data-phone-btn>
+        <span class="phone__codes" aria-hidden="true"><span>093</span><span>096</span><span>099</span></span>
+        <span class="phone__num" aria-hidden="true">09 01234</span>
+        <span class="sr">Телефони: 093, 096 або 099 і далі 09 01234</span>
+      </button>
+      <a class="hdr__soc" href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
       <a class="btn btn--sm hdr__cta" href="#retreat-booking">Обговорити ретрит</a>
     </div>
 
     <div class="hdr__mob">
-      <a class="hdr__icon" href="tel:+380960901234" aria-label="Подзвонити: 096 09 01234"><svg><use href="#i-phone"/></svg></a>
+      <button class="hdr__icon" type="button" aria-label="Подзвонити" aria-expanded="false" aria-controls="phone-pop" data-phone-btn><svg><use href="#i-phone"/></svg></button>
       <button class="hdr__icon" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mnav" data-burger><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+
+  <div class="phone__pop" id="phone-pop" hidden data-phone-pop>
+    <p class="phone__title">Зателефонуйте на зручний номер</p>
+    <a href="tel:+380960901234"><svg><use href="#i-phone"/></svg><span>096 09 01234</span><small>Київстар</small></a>
+    <a href="tel:+380990901234"><svg><use href="#i-phone"/></svg><span>099 09 01234</span><small>Vodafone</small></a>
+    <a href="tel:+380930901234"><svg><use href="#i-phone"/></svg><span>093 09 01234</span><small>lifecell</small></a>
+    <div class="phone__msg">
+      <a href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener"><svg><use href="#i-telegram"/></svg>Telegram</a>
+      <a href="viber://chat?number=%2B380960901234"><svg><use href="#i-viber"/></svg>Viber</a>
     </div>
   </div>
 </header>
@@ -101,18 +121,16 @@
 <!-- Мобільне меню -->
 <div class="mnav" id="mnav" hidden data-mnav>
   <div class="mnav__top">
-    <div class="season" data-season-switch>
-      <button type="button" data-set-season="winter"><svg><use href="#i-snow"/></svg>Зима</button>
-      <button type="button" data-set-season="summer"><svg><use href="#i-sun"/></svg>Літо</button>
-    </div>
+    <img src="assets/logo/emblem_240.webp" width="64" height="64" alt="Оселя">
     <button class="hdr__icon" type="button" aria-label="Закрити меню" data-mnav-close><svg><use href="#i-close"/></svg></button>
   </div>
   <nav class="mnav__links" aria-label="Розділи">
     <a href="index.html#rooms">Номери</a>
     <a href="index.html#warmth">Сауна, чан і чайна церемонія</a>
     <a href="index.html#kitchen">Кухня</a>
-    <a href="index.html#mountains"><span data-only="winter">Скі-тур і прокат</span><span data-only="summer">Походи в гори</span></a>
-    <a href="retreat.html" aria-current="page">Ретрити</a>
+    <a href="index.html#mountains">Скі-тур</a>
+    <a href="index.html#rent">Прокат спорядження</a>
+    <a href="retreat.html">Ретрити</a>
     <a href="index.html#location">Як доїхати</a>
     <a href="index.html#reviews">Відгуки</a>
   </nav>
@@ -121,13 +139,20 @@
     <a href="tel:+380990901234">099 09 01234</a>
     <a href="tel:+380930901234">093 09 01234</a>
   </div>
+  <div class="social social--light">
+    <a href="https://www.instagram.com/oselia_dragobrat/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+    <a href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
+    <a href="viber://chat?number=%2B380960901234" aria-label="Viber"><svg><use href="#i-viber"/></svg></a>
+    <a href="https://www.facebook.com/oselia.dragobrat" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+    <a href="https://www.youtube.com/@oselia" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
+  </div>
   <a class="btn btn--full" href="#retreat-booking">Обговорити ретрит</a>
 </div>
 
 <main id="main">
 
 <section class="rhero" id="top">
-  <img class="rhero__img" src="assets/img/summer-2.webp" alt="" width="706" height="706">
+  <img class="rhero__img" src="assets/img/summer-1.webp" alt="" width="1100" height="706">
   <div class="rhero__inner wrap">
     <p class="hero__place">Драгобрат, Свидовецький масив, 1350 м</p>
     <h1 class="hero__title">Ретрити в Оселі</h1>
@@ -141,7 +166,7 @@
 
 <section class="rsec">
   <div class="wrap rrow">
-    <figure class="rrow__media ridge"><img src="assets/img/summer-1.webp" alt="Свидовець над готелем Оселя влітку" loading="lazy" width="1100" height="706"></figure>
+    <figure class="rrow__media ridge"><img src="assets/img/summer-2.webp" alt="Оселя біля підніжжя Свидовця влітку" loading="lazy" width="706" height="706"></figure>
     <div class="rrow__text">
       <h2 class="h2">Зручна локація</h2>
       <p class="lead">Готель стоїть на курорті Драгобрат на Свидовецькому масиві Карпат, на висоті 1350 метрів. Звідси відкриваються краєвиди на Говерлу, Петрос, Близницю та Хом'як.</p>
@@ -180,10 +205,10 @@
   </div>
 </section>
 
-<section class="mount rpower">
-  <div class="mount__ridge" aria-hidden="true"></div>
+<section class="rpower">
+  <div class="bg-ridge" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="mount__head">
+    <div class="ski__head">
       <h2 class="h2">Місця сили поруч</h2>
       <p class="lead">Оселя розташована поруч з найкращими природними місцями Карпатського високогір'я. Організуємо екскурсії та активності, щоб учасники відчули культуру й природу Карпат.</p>
     </div>
@@ -211,15 +236,19 @@
         <p>Карпатські праліси з віковими соснами та буками, де майже немає впливу людини, і приальпійські луки з запашними травами та квітами — для прогулянок, медитацій і практик на природі.</p>
       </div>
     </div>
-    <figure class="places__photo ridge"><img src="assets/img/retreat-nature.webp" alt="Гостя медитує над смерековим лісом" loading="lazy" width="1024" height="1024"></figure>
+    <div class="places__pair">
+      <figure class="ridge"><img src="assets/img/clouds.webp" alt="Море хмар над вершинами на світанку" loading="lazy" width="720" height="1280"></figure>
+      <figure><img src="assets/img/rev/mariana-1.webp" alt="Свидовець і смерековий ліс біля Оселі" loading="lazy" width="460" height="460"></figure>
+      <figure class="ridge"><img src="assets/img/sunflare.webp" alt="Сонце крізь смереки біля готелю" loading="lazy" width="720" height="1280"></figure>
+    </div>
   </div>
 </section>
 
 <section class="rsec">
   <div class="wrap rrow">
     <figure class="rrow__media rrow__media--pair">
-      <img class="ridge" src="assets/img/chan-2.webp" alt="Гарячий чан у лісі" loading="lazy" width="625" height="625">
-      <img src="assets/img/sauna-6-s.webp" alt="Сауна" loading="lazy" width="800" height="800">
+      <img src="assets/img/chan-2.webp" alt="Гарячий чан у лісі" loading="lazy" width="625" height="625">
+      <img class="ridge" src="assets/img/sauna-6-s.webp" alt="Сауна" loading="lazy" width="800" height="800">
     </figure>
     <div class="rrow__text">
       <h2 class="h2">Чан і сауна</h2>
@@ -282,9 +311,10 @@
 
 <!-- ============ ФУТЕР ============ -->
 <footer class="ftr">
+  <div class="bg-ridge" aria-hidden="true"></div>
   <div class="wrap ftr__grid">
     <div class="ftr__brand">
-      <img src="assets/logo/emblem_240.webp" width="96" height="96" alt="Оселя" loading="lazy">
+      <img src="assets/logo/emblem_240.webp" width="104" height="104" alt="Оселя" loading="lazy">
       <p>Готель «Оселя»<br>Драгобрат, смт Ясіня,<br>Закарпатська область</p>
     </div>
     <div>
@@ -299,14 +329,16 @@
       <a href="index.html#rooms">Номери</a>
       <a href="index.html#warmth">Сауна і чан</a>
       <a href="index.html#kitchen">Кухня</a>
-      <a href="retreat.html" aria-current="page">Ретрити</a>
+      <a href="index.html#rent">Прокат</a>
+      <a href="retreat.html">Ретрити</a>
       <a href="index.html#location">Як доїхати</a>
     </div>
     <div>
       <h3>Ми в соцмережах</h3>
-      <div class="social">
+      <div class="social social--light">
         <a href="https://www.instagram.com/oselia_dragobrat/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
         <a href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
+        <a href="viber://chat?number=%2B380960901234" aria-label="Viber"><svg><use href="#i-viber"/></svg></a>
         <a href="https://www.facebook.com/oselia.dragobrat" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
         <a href="https://www.youtube.com/@oselia" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
       </div>
@@ -318,7 +350,8 @@
   </div>
 </footer>
 
-<!-- ============ МОДАЛКИ ============ -->
+
+
 <div class="toast" data-toast role="status" aria-live="polite" hidden></div>
 
 <canvas class="snow" data-snow aria-hidden="true"></canvas>
