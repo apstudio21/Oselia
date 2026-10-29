@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ретрити в Оселі — йога-тури та корпоративи на Драгобраті</title>
+<meta name="description" content="Ретрити, йога-тури та корпоративи в готелі Оселя на Драгобраті: зала для йоги на 15–20 осіб, номери з видом на гори, харчування з урахуванням дієт, чан і сауна.">
+<meta name="theme-color" content="#1F2E27">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ретрити в Оселі, Драгобрат">
+<meta property="og:description" content="Готель на Драгобраті: номери з видом на Говерлу, сауна, чан, домашня кухня, скі-тури з гідами.">
+<meta property="og:image" content="assets/img/poster-hero-desktop.webp">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/kurale-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/onest-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  // Сезон обирається до відмалювання сторінки, щоб не було «стрибка»
+  (function () {
+    var s = 'winter';
+    try {
+      var q = new URLSearchParams(location.search).get('season');
+      s = q === 'summer' || q === 'winter' ? q : (localStorage.getItem('oselia-season') || 'winter');
+    } catch (e) {}
+    document.documentElement.setAttribute('data-season', s);
+  })();
+</script>
+</head>
+<body class="page-retreat">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5 9 3l1.8 4.3-2.2 1.6a12 12 0 0 0 6.5 6.5l1.6-2.2L21 15l-.5 2.4a2.6 2.6 0 0 1-2.6 2.1A15.4 15.4 0 0 1 4.5 6.1 2.6 2.6 0 0 1 6.6 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-telegram" viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.3c-1 .4-1 1.5.1 1.8l4.6 1.4 1.8 5.5c.2.7 1.1.9 1.6.4l2.6-2.4 4.8 3.5c.7.5 1.6.1 1.8-.7l3-14.6c.2-1-.8-1.8-1.8-1.4ZM9.6 14.2l8.6-7.7-6.9 9-.3 3-1.4-4.3Z" fill="currentColor"/></symbol>
+  <symbol id="i-viber" viewBox="0 0 24 24"><path d="M12 2.5c-4.6 0-8.3 2.8-8.3 7.6 0 2.7 1 4.6 2.8 5.8v3.6c0 .5.6.8 1 .4l2.6-2.7c.6.1 1.2.1 1.9.1 4.6 0 8.3-2.8 8.3-7.2S16.6 2.5 12 2.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.2 7.3c.3-.2.7-.2.9.1l.8 1.2c.2.3.1.7-.1.9l-.4.3c.4 1 1.2 1.9 2.2 2.4l.4-.4c.2-.3.6-.3.9-.1l1.2.8c.3.2.4.6.1.9-.6.8-1.5 1-2.4.6a7.4 7.4 0 0 1-4-4.1c-.3-.9 0-1.8.4-2.6Z" fill="currentColor"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M13.5 21v-7.4h2.6l.4-3h-3V8.7c0-.9.3-1.5 1.5-1.5h1.6V4.5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3Z" fill="currentColor"/></symbol>
+  <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M21.2 7.6a2.5 2.5 0 0 0-1.8-1.8C17.9 5.4 12 5.4 12 5.4s-5.9 0-7.4.4a2.5 2.5 0 0 0-1.8 1.8C2.4 9.1 2.4 12 2.4 12s0 2.9.4 4.4c.2.9.9 1.6 1.8 1.8 1.5.4 7.4.4 7.4.4s5.9 0 7.4-.4c.9-.2 1.6-.9 1.8-1.8.4-1.5.4-4.4.4-4.4s0-2.9-.4-4.4ZM10.1 14.8V9.2l4.9 2.8-4.9 2.8Z" fill="currentColor"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6"/><path d="m9.5 4.2 2.5 2 2.5-2M9.5 19.8l2.5-2 2.5 2M4.4 10.4l3.1-.6-1-3M19.6 13.6l-3.1.6 1 3M4.4 13.6l3.1.6-1 3M19.6 10.4l-3.1-.6 1-3"/></g></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z" fill="currentColor"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5L8 5.5Z" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 1 1 13 0C18.5 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-ski" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m3 20 9-15 9 15"/><path d="m8.5 11.2 2 1.4 1.5-1.6 1.5 1.6 2-1.4"/></g></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 16.5v-4l2-5.2c.2-.5.7-.8 1.2-.8h9.6c.5 0 1 .3 1.2.8l2 5.2v4H4Z"/><path d="M4 12.5h16"/><circle cx="7.6" cy="16.6" r="1.6"/><circle cx="16.4" cy="16.6" r="1.6"/></g></symbol>
+  <symbol id="i-parking" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 17V7.5h3a2.6 2.6 0 0 1 0 5.2h-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-medic" viewBox="0 0 24 24"><path d="M9.5 4h5v5.5H20v5h-5.5V20h-5v-5.5H4v-5h5.5V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="16.5" cy="9" r="2.4"/><path d="M15.5 14.1c2.6-.3 4.5 1.3 5 4.4"/></g></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M6 12h12M12 6v12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Перейти до змісту</a>
+
+<!-- ============ ХЕДЕР ============ -->
+<header class="hdr" data-hdr>
+  <div class="hdr__bar">
+    <nav class="hdr__nav hdr__nav--left" aria-label="Розділи">
+      <a href="index.html#rooms">Номери</a>
+      <a href="index.html#warmth">Сауна і чан</a>
+      <a href="index.html#kitchen">Кухня</a>
+      <a href="index.html#mountains"><span data-only="winter">Скі-тур</span><span data-only="summer">Походи</span></a>
+    </nav>
+
+    <a class="hdr__logo" href="index.html" aria-label="Оселя — на головну">
+      <img src="assets/logo/emblem_240.webp" srcset="assets/logo/emblem_240.webp 240w, assets/logo/emblem_480.webp 480w" sizes="132px" width="240" height="240" alt="Оселя">
+    </a>
+
+    <div class="hdr__nav hdr__nav--right">
+      <a href="retreat.html" aria-current="page">Ретрити</a>
+      <a href="index.html#location">Як доїхати</a>
+      <div class="phone" data-phone>
+        <button class="phone__btn" type="button" aria-expanded="false" aria-controls="phone-pop" data-phone-btn>
+          <span class="phone__codes" aria-hidden="true"><span>093</span><span>096</span><span>099</span></span>
+          <span class="phone__num">09 01234</span>
+          <span class="sr">Телефони: 093, 096 або 099 і далі 09 01234</span>
+        </button>
+        <div class="phone__pop" id="phone-pop" hidden>
+          <a href="tel:+380960901234"><span>096 09 01234</span><small>Київстар</small></a>
+          <a href="tel:+380990901234"><span>099 09 01234</span><small>Vodafone</small></a>
+          <a href="tel:+380930901234"><span>093 09 01234</span><small>lifecell</small></a>
+          <div class="phone__msg">
+            <a href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener"><svg><use href="#i-telegram"/></svg>Telegram</a>
+            <a href="viber://chat?number=%2B380960901234"><svg><use href="#i-viber"/></svg>Viber</a>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn--sm hdr__cta" href="#retreat-booking">Обговорити ретрит</a>
+    </div>
+
+    <div class="hdr__mob">
+      <a class="hdr__icon" href="tel:+380960901234" aria-label="Подзвонити: 096 09 01234"><svg><use href="#i-phone"/></svg></a>
+      <button class="hdr__icon" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mnav" data-burger><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- Мобільне меню -->
+<div class="mnav" id="mnav" hidden data-mnav>
+  <div class="mnav__top">
+    <div class="season" data-season-switch>
+      <button type="button" data-set-season="winter"><svg><use href="#i-snow"/></svg>Зима</button>
+      <button type="button" data-set-season="summer"><svg><use href="#i-sun"/></svg>Літо</button>
+    </div>
+    <button class="hdr__icon" type="button" aria-label="Закрити меню" data-mnav-close><svg><use href="#i-close"/></svg></button>
+  </div>
+  <nav class="mnav__links" aria-label="Розділи">
+    <a href="index.html#rooms">Номери</a>
+    <a href="index.html#warmth">Сауна, чан і чайна церемонія</a>
+    <a href="index.html#kitchen">Кухня</a>
+    <a href="index.html#mountains"><span data-only="winter">Скі-тур і прокат</span><span data-only="summer">Походи в гори</span></a>
+    <a href="retreat.html" aria-current="page">Ретрити</a>
+    <a href="index.html#location">Як доїхати</a>
+    <a href="index.html#reviews">Відгуки</a>
+  </nav>
+  <div class="mnav__contacts">
+    <a href="tel:+380960901234">096 09 01234</a>
+    <a href="tel:+380990901234">099 09 01234</a>
+    <a href="tel:+380930901234">093 09 01234</a>
+  </div>
+  <a class="btn btn--full" href="#retreat-booking">Обговорити ретрит</a>
+</div>
+
+<main id="main">
+
+<section class="rhero" id="top">
+  <img class="rhero__img" src="assets/img/summer-2.webp" alt="" width="706" height="706">
+  <div class="rhero__inner wrap">
+    <p class="hero__place">Драгобрат, Свидовецький масив, 1350 м</p>
+    <h1 class="hero__title">Ретрити в Оселі</h1>
+    <p class="hero__lead">Відчуйте справжню енергію гір у затишному готелі, де кожен день стає ритуалом релаксації та відновлення. Комфорт, турботливе харчування й природна краса — основа для вашого ретрит-туру.</p>
+    <div class="hero__actions">
+      <a class="btn btn--light" href="#retreat-booking">Обговорити ретрит</a>
+      <a class="btn btn--ghost" href="index.html#rooms">Номери</a>
+    </div>
+  </div>
+</section>
+
+<section class="rsec">
+  <div class="wrap rrow">
+    <figure class="rrow__media ridge"><img src="assets/img/summer-1.webp" alt="Свидовець над готелем Оселя влітку" loading="lazy" width="1100" height="706"></figure>
+    <div class="rrow__text">
+      <h2 class="h2">Зручна локація</h2>
+      <p class="lead">Готель стоїть на курорті Драгобрат на Свидовецькому масиві Карпат, на висоті 1350 метрів. Звідси відкриваються краєвиди на Говерлу, Петрос, Близницю та Хом'як.</p>
+      <p>Навколо — ліс з високими соснами, тиша і спів птахів. Ідеальне місце для тих, хто шукає гармонії та глибокого співіснування з природою.</p>
+    </div>
+  </div>
+
+  <div class="wrap rrow rrow--rev">
+    <figure class="rrow__media rrow__media--pair">
+      <img class="ridge" src="assets/img/twin-5-s.webp" alt="Номер з видом на гори" loading="lazy" width="800" height="800">
+      <img src="assets/img/double-1-s.webp" alt="Номер з балконом" loading="lazy" width="800" height="800">
+    </figure>
+    <div class="rrow__text">
+      <h2 class="h2">Просторі й затишні номери</h2>
+      <p class="lead">Кожен номер має власну ванну кімнату з душем, рушниками та туалетним приладдям — у кожного учасника свій приватний простір.</p>
+      <p>Вранці перші промені сонця зігрівають вершини та наповнюють кімнату світлом, а з балкону видно гори — найкращий заряд енергії перед практиками.</p>
+    </div>
+  </div>
+
+  <div class="wrap rrow">
+    <figure class="rrow__media ridge"><img src="assets/img/retreat-yoga.webp" alt="Заняття йогою в залі" loading="lazy" width="1024" height="1024"></figure>
+    <div class="rrow__text">
+      <h2 class="h2">Зала для йоги</h2>
+      <p class="lead">Простора зала, зручна для 15–20 осіб. Підлогу можна підготувати для будь-яких практик.</p>
+      <p>Великі вікна дають природне освітлення протягом усіх занять, а вид на гори додає атмосфері спокою та згуртованості.</p>
+    </div>
+  </div>
+
+  <div class="wrap rrow rrow--rev">
+    <figure class="rrow__media ridge"><img src="assets/img/retreat-food.webp" alt="Здоровий сніданок" loading="lazy" width="1024" height="1024"></figure>
+    <div class="rrow__text">
+      <h2 class="h2">Харчування</h2>
+      <p class="lead">Наші кухарі готують смачну й здорову їжу з урахуванням потреб кожного гостя.</p>
+      <p>Вегетаріанство, веганство, безглютенова дієта чи інші обмеження — врахуємо все. Харчування в Оселі підтримує вашу енергію та гармонію під час ретриту.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mount rpower">
+  <div class="mount__ridge" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="mount__head">
+      <h2 class="h2">Місця сили поруч</h2>
+      <p class="lead">Оселя розташована поруч з найкращими природними місцями Карпатського високогір'я. Організуємо екскурсії та активності, щоб учасники відчули культуру й природу Карпат.</p>
+    </div>
+    <div class="places">
+      <div class="places__col">
+        <h3 class="h3">Вершини</h3>
+        <ul>
+          <li><span>Близниця</span><b>1881 м</b></li>
+          <li><span>Великий Котел</span><b>1770 м</b></li>
+          <li><span>Догяска</span><b>1761 м</b></li>
+          <li><span>Ворожеска</span><b>1731 м</b></li>
+        </ul>
+      </div>
+      <div class="places__col">
+        <h3 class="h3">Льодовикові озера</h3>
+        <ul>
+          <li><span>Герешаска</span></li>
+          <li><span>Апшинець</span></li>
+          <li><span>Ворожеска</span></li>
+          <li><span>Івор</span></li>
+        </ul>
+      </div>
+      <div class="places__col places__col--text">
+        <h3 class="h3">Праліси й полонини</h3>
+        <p>Карпатські праліси з віковими соснами та буками, де майже немає впливу людини, і приальпійські луки з запашними травами та квітами — для прогулянок, медитацій і практик на природі.</p>
+      </div>
+    </div>
+    <figure class="places__photo ridge"><img src="assets/img/retreat-nature.webp" alt="Гостя медитує над смерековим лісом" loading="lazy" width="1024" height="1024"></figure>
+  </div>
+</section>
+
+<section class="rsec">
+  <div class="wrap rrow">
+    <figure class="rrow__media rrow__media--pair">
+      <img class="ridge" src="assets/img/chan-2.webp" alt="Гарячий чан у лісі" loading="lazy" width="625" height="625">
+      <img src="assets/img/sauna-6-s.webp" alt="Сауна" loading="lazy" width="800" height="800">
+    </figure>
+    <div class="rrow__text">
+      <h2 class="h2">Чан і сауна</h2>
+      <p class="lead">Сауна на дровах з басейном холодної води, а надворі, серед вікових ялин, — великий гарячий чан з джерельною водою на 8 осіб.</p>
+      <p>Найкраще місце, щоб розслабитися після практик. Наш професійний і ненав'язливий персонал поруч у будь-який час дня і ночі.</p>
+      <a class="btn btn--line" href="index.html#warmth">Ціни на сауну і чан</a>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="retreat-booking">
+  <div class="wrap booking__grid">
+    <div class="booking__intro">
+      <h2 class="h2">Обговорімо ваш ретрит</h2>
+      <p class="lead">Локація, розміщення, харчування, зала для занять і відпочинок — усе в одному місці. Напишіть дати й кількість учасників, і ми запропонуємо умови для вашої групи.</p>
+      <div class="booking__phones">
+        <a href="tel:+380960901234">096 09 01234</a>
+        <a href="tel:+380990901234">099 09 01234</a>
+        <a href="tel:+380930901234">093 09 01234</a>
+        <a href="mailto:oselia.dragobrat@gmail.com">oselia.dragobrat@gmail.com</a>
+      </div>
+    </div>
+
+    <form class="bform" data-booking novalidate>
+      <fieldset class="bform__what">
+        <legend>Формат</legend>
+        <div class="chips">
+          <label><input type="radio" name="what" value="Ретрит" checked><span>Ретрит</span></label>
+          <label><input type="radio" name="what" value="Корпоратив"><span>Корпоратив або тренінг</span></label>
+        </div>
+      </fieldset>
+      <div class="field-row">
+        <label class="field"><span data-date-label-in>Заїзд</span><input type="date" name="in" required></label>
+        <label class="field" data-out-field><span>Виїзд</span><input type="date" name="out"></label>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <span>Учасників</span>
+          <div class="stepper" data-stepper>
+            <button type="button" aria-label="Менше учасників" data-step="-1"><svg><use href="#i-minus"/></svg></button>
+            <input type="number" name="guests" value="15" min="1" max="40" inputmode="numeric" aria-label="Кількість учасників">
+            <button type="button" aria-label="Більше учасників" data-step="1"><svg><use href="#i-plus"/></svg></button>
+          </div>
+        </div>
+        <label class="field"><span>Ім'я</span><input type="text" name="name" autocomplete="given-name" placeholder="Як до вас звертатися"></label>
+      </div>
+      <label class="field"><span>Коментар</span><textarea name="note" rows="3" placeholder="Програма, харчування, побажання до зали…"></textarea></label>
+      <p class="bform__err" data-booking-err role="alert" hidden></p>
+      <div class="bform__send">
+        <button class="btn btn--tg" type="submit" data-send="telegram"><svg><use href="#i-telegram"/></svg>Надіслати в Telegram</button>
+        <button class="btn btn--vb" type="submit" data-send="viber"><svg><use href="#i-viber"/></svg>Надіслати у Viber</button>
+      </div>
+      <p class="bform__hint">Відкриється чат з рецепцією з уже готовим повідомленням — залишиться лише натиснути «Надіслати».</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============ ФУТЕР ============ -->
+<footer class="ftr">
+  <div class="wrap ftr__grid">
+    <div class="ftr__brand">
+      <img src="assets/logo/emblem_240.webp" width="96" height="96" alt="Оселя" loading="lazy">
+      <p>Готель «Оселя»<br>Драгобрат, смт Ясіня,<br>Закарпатська область</p>
+    </div>
+    <div>
+      <h3>Телефони</h3>
+      <a href="tel:+380960901234">096 09 01234</a>
+      <a href="tel:+380990901234">099 09 01234</a>
+      <a href="tel:+380930901234">093 09 01234</a>
+      <a href="mailto:oselia.dragobrat@gmail.com">oselia.dragobrat@gmail.com</a>
+    </div>
+    <div>
+      <h3>Розділи</h3>
+      <a href="index.html#rooms">Номери</a>
+      <a href="index.html#warmth">Сауна і чан</a>
+      <a href="index.html#kitchen">Кухня</a>
+      <a href="retreat.html" aria-current="page">Ретрити</a>
+      <a href="index.html#location">Як доїхати</a>
+    </div>
+    <div>
+      <h3>Ми в соцмережах</h3>
+      <div class="social">
+        <a href="https://www.instagram.com/oselia_dragobrat/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+        <a href="https://t.me/oselia_dragobrat" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
+        <a href="https://www.facebook.com/oselia.dragobrat" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+        <a href="https://www.youtube.com/@oselia" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap ftr__bottom">
+    <span>© <span data-year>2026</span> Оселя Драгобрат</span>
+    <span>Бронювання відкрито на сезон 2026–2027</span>
+  </div>
+</footer>
+
+<!-- ============ МОДАЛКИ ============ -->
+<div class="toast" data-toast role="status" aria-live="polite" hidden></div>
+
+<canvas class="snow" data-snow aria-hidden="true"></canvas>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
