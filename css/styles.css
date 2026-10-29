@@ -56,7 +56,7 @@
   --gut: clamp(16px, 4vw, 48px);
   --sec: clamp(84px, 11vw, 160px);
   --ease: cubic-bezier(.22, .7, .2, 1);
-  --hdr: 84px;
+  --hdr: 112px;
 }
 
 /* ---------- База ---------- */
@@ -99,14 +99,17 @@ section[id] { scroll-margin-top: 70px; }
   -webkit-mask: url(../assets/img/ridge-photo.svg) top center / 100% auto no-repeat;
           mask: url(../assets/img/ridge-photo.svg) top center / 100% auto no-repeat;
 }
-/* Силует гір з ялинками — лише на межі фонових блоків */
+/* Силует гір з ялинками — лише на межі фонових блоків (без розтягування) */
 .bg-ridge {
   position: absolute; left: 0; right: 0; bottom: calc(100% - 2px);
-  height: clamp(60px, 8.2vw, 124px); background: inherit;
-  -webkit-mask: url(../assets/img/ridge-trees.svg) center bottom / auto 100% repeat-x;
-          mask: url(../assets/img/ridge-trees.svg) center bottom / auto 100% repeat-x;
+  aspect-ratio: 648 / 142; background: inherit;
+  -webkit-mask: url(../assets/img/ridge-trees.svg) 0 0 / 100% 100% no-repeat;
+          mask: url(../assets/img/ridge-trees.svg) 0 0 / 100% 100% no-repeat;
   pointer-events: none;
 }
+/* Спокійний силует гір без ялинок */
+.bg-ridge--hills { aspect-ratio: 636 / 56; -webkit-mask-image: url(../assets/img/ridge-hills.svg); mask-image: url(../assets/img/ridge-hills.svg); }
+:root { --ridge-gap: calc(100vw * 142 / 648 * .62); --hills-gap: calc(100vw * 56 / 636 * .9); }
 
 .ticks { list-style: none; padding: 0; margin: 28px 0; display: grid; gap: 12px; }
 .ticks li { display: flex; align-items: center; gap: 14px; }
@@ -146,7 +149,7 @@ section[id] { scroll-margin-top: 70px; }
 }
 .hdr__bar::after { content: ""; position: absolute; inset: auto 0 0; height: 1px; background: currentColor; opacity: 0; transition: opacity .45s; }
 .hdr.is-solid { color: var(--spruce); }
-.hdr.is-solid .hdr__bar { height: 68px; background: rgba(237, 240, 236, .92); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+.hdr.is-solid .hdr__bar { height: 86px; background: rgba(237, 240, 236, .92); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
 .hdr.is-solid .hdr__bar::after { opacity: .12; }
 
 .hdr__nav { display: flex; align-items: center; gap: clamp(14px, 1.6vw, 28px); font-size: 15px; font-weight: 500; flex: 1; }
@@ -162,7 +165,7 @@ section[id] { scroll-margin-top: 70px; }
   transition: width .45s var(--ease), height .45s var(--ease), margin .45s var(--ease), top .45s var(--ease);
 }
 .hdr__logo img { width: 100%; height: 100%; }
-.hdr.is-solid .hdr__logo { width: 104px; height: 104px; margin-left: -52px; top: 8px; filter: drop-shadow(0 8px 18px rgba(10, 20, 15, .2)); }
+.hdr.is-solid .hdr__logo { width: 112px; height: 112px; margin-left: -56px; top: 10px; filter: drop-shadow(0 8px 18px rgba(10, 20, 15, .2)); }
 
 .hdr__right { display: flex; align-items: center; justify-content: flex-end; gap: clamp(10px, 1.2vw, 18px); flex: 1; }
 .hdr__soc { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; border: 1px solid; border-color: color-mix(in srgb, currentColor 35%, transparent); text-decoration: none; transition: background-color .25s, color .25s; }
@@ -182,7 +185,7 @@ section[id] { scroll-margin-top: 70px; }
   box-shadow: 0 24px 60px -14px rgba(15, 25, 20, .4);
   animation: pop .3s var(--ease);
 }
-.hdr.is-solid .phone__pop { top: 78px; }
+.hdr.is-solid .phone__pop { top: 94px; }
 .phone__title { margin: 6px 10px 8px; font-size: 13px; color: var(--moss); }
 .phone__pop > a { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 17px; font-variant-numeric: tabular-nums; }
 .phone__pop > a svg { width: 18px; height: 18px; color: var(--kalyna); }
@@ -303,9 +306,9 @@ section[id] { scroll-margin-top: 70px; }
 @media (max-width: 900px) { .about__grid { grid-template-columns: minmax(0, 1fr); } .about__media { max-width: 520px; } }
 
 /* ---------- Цифри навколо кола ---------- */
-.nums { position: relative; background: var(--spruce); color: var(--snow); padding: calc(var(--sec) * .7) 0 var(--sec); margin-top: clamp(60px, 8vw, 120px); }
+.nums { position: relative; background: var(--spruce); color: var(--snow); padding: calc(var(--sec) * .7) 0 var(--sec); }
 .about + .nums { margin-top: 0; }
-.about { padding-bottom: calc(var(--sec) + clamp(40px, 6vw, 90px)); }
+.about { padding-bottom: calc(var(--sec) + var(--hills-gap)); }
 .nums__title { text-align: center; margin-bottom: clamp(40px, 6vw, 72px); }
 .nums__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 420px) minmax(0, 1fr); gap: clamp(20px, 4vw, 64px); align-items: center; }
 .nums__col { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(28px, 4vw, 52px); }
@@ -419,7 +422,8 @@ section[id] { scroll-margin-top: 70px; }
 }
 
 /* ---------- Скі-тур (нічне небо) ---------- */
-.ski { position: relative; background: var(--night); color: var(--snow); padding: calc(var(--sec) * .75) 0 var(--sec); margin-top: clamp(60px, 8vw, 120px); overflow-x: clip; }
+.ski { position: relative; background: var(--night); color: var(--snow); padding: calc(var(--sec) * .75) 0 var(--sec); margin-top: var(--ridge-gap); }
+.ski .marquee { overflow: hidden; }
 .ski__head { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 28px clamp(32px, 6vw, 96px); align-items: end; margin-bottom: clamp(36px, 5vw, 60px); }
 .ski__head .lead { margin: 0; color: color-mix(in srgb, var(--snow) 80%, transparent); }
 .ski__head b, .ski b { color: var(--snow); }
@@ -552,7 +556,7 @@ section[id] { scroll-margin-top: 70px; }
 @media (max-width: 640px) { .reviews__nav { display: none; } }
 
 /* ---------- Бронювання ---------- */
-.booking { padding: var(--sec) 0; background: var(--spruce); color: var(--snow); }
+.booking { padding: var(--sec) 0 calc(var(--sec) + var(--hills-gap)); background: var(--spruce); color: var(--snow); }
 .booking__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(36px, 6vw, 96px); align-items: start; }
 .booking__intro { position: sticky; top: 110px; }
 .booking__intro .h2 { margin-bottom: 24px; }
@@ -614,7 +618,7 @@ section[id] { scroll-margin-top: 70px; }
 @media (max-width: 560px) { .field-row, .bform__send, .rpick { grid-template-columns: minmax(0, 1fr); } }
 
 /* ---------- Футер ---------- */
-.ftr { position: relative; background: var(--spruce-deep); color: var(--mist); padding: clamp(56px, 8vw, 96px) 0 28px; font-size: 15px; margin-top: clamp(40px, 6vw, 90px); }
+.ftr { position: relative; background: var(--spruce-deep); color: var(--mist); padding: clamp(56px, 8vw, 96px) 0 28px; font-size: 15px; margin-top: var(--hills-gap); }
 .booking + .ftr, main:has(.booking:last-child) + .ftr { margin-top: 0; }
 .ftr__grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 36px; }
 .ftr__brand { display: flex; gap: 18px; align-items: center; }
@@ -740,7 +744,7 @@ body.is-locked { overflow: hidden; }
 .rrow__text .h2 { margin-bottom: 24px; }
 .rrow__text p:not(.lead) { color: var(--moss); }
 .rrow__text .btn { margin-top: 12px; }
-.rpower { position: relative; background: var(--night); color: var(--snow); padding: calc(var(--sec) * .75) 0 var(--sec); margin-top: clamp(60px, 8vw, 120px); }
+.rpower { position: relative; background: var(--night); color: var(--snow); padding: calc(var(--sec) * .75) 0 var(--sec); margin-top: var(--ridge-gap); }
 .rpower .ski__head .lead { color: color-mix(in srgb, var(--snow) 80%, transparent); }
 .places { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.3fr); gap: clamp(28px, 4vw, 64px); }
 .places .h3 { margin-bottom: 16px; }
